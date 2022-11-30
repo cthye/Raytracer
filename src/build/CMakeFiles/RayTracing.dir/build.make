@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/cthye/games101/hw7
+CMAKE_SOURCE_DIR = /Users/cthye/cse167-final/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/cthye/games101/hw7/build
+CMAKE_BINARY_DIR = /Users/cthye/cse167-final/src/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/RayTracing.dir/depend.make
@@ -70,74 +70,74 @@ include CMakeFiles/RayTracing.dir/progress.make
 include CMakeFiles/RayTracing.dir/flags.make
 
 CMakeFiles/RayTracing.dir/main.cpp.o: CMakeFiles/RayTracing.dir/flags.make
-CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/games101/hw7/main.cpp
+CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp
 CMakeFiles/RayTracing.dir/main.cpp.o: CMakeFiles/RayTracing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cthye/games101/hw7/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RayTracing.dir/main.cpp.o"
-	/opt/homebrew/Cellar/llvm/15.0.0/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracing.dir/main.cpp.o -MF CMakeFiles/RayTracing.dir/main.cpp.o.d -o CMakeFiles/RayTracing.dir/main.cpp.o -c /Users/cthye/games101/hw7/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cthye/cse167-final/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RayTracing.dir/main.cpp.o"
+	/opt/homebrew/Cellar/llvm/15.0.2/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracing.dir/main.cpp.o -MF CMakeFiles/RayTracing.dir/main.cpp.o.d -o CMakeFiles/RayTracing.dir/main.cpp.o -c /Users/cthye/cse167-final/src/main.cpp
 
 CMakeFiles/RayTracing.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayTracing.dir/main.cpp.i"
-	/opt/homebrew/Cellar/llvm/15.0.0/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cthye/games101/hw7/main.cpp > CMakeFiles/RayTracing.dir/main.cpp.i
+	/opt/homebrew/Cellar/llvm/15.0.2/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cthye/cse167-final/src/main.cpp > CMakeFiles/RayTracing.dir/main.cpp.i
 
 CMakeFiles/RayTracing.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayTracing.dir/main.cpp.s"
-	/opt/homebrew/Cellar/llvm/15.0.0/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cthye/games101/hw7/main.cpp -o CMakeFiles/RayTracing.dir/main.cpp.s
+	/opt/homebrew/Cellar/llvm/15.0.2/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cthye/cse167-final/src/main.cpp -o CMakeFiles/RayTracing.dir/main.cpp.s
 
 CMakeFiles/RayTracing.dir/Vector.cpp.o: CMakeFiles/RayTracing.dir/flags.make
-CMakeFiles/RayTracing.dir/Vector.cpp.o: /Users/cthye/games101/hw7/Vector.cpp
+CMakeFiles/RayTracing.dir/Vector.cpp.o: /Users/cthye/cse167-final/src/Vector.cpp
 CMakeFiles/RayTracing.dir/Vector.cpp.o: CMakeFiles/RayTracing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cthye/games101/hw7/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/RayTracing.dir/Vector.cpp.o"
-	/opt/homebrew/Cellar/llvm/15.0.0/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracing.dir/Vector.cpp.o -MF CMakeFiles/RayTracing.dir/Vector.cpp.o.d -o CMakeFiles/RayTracing.dir/Vector.cpp.o -c /Users/cthye/games101/hw7/Vector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cthye/cse167-final/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/RayTracing.dir/Vector.cpp.o"
+	/opt/homebrew/Cellar/llvm/15.0.2/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracing.dir/Vector.cpp.o -MF CMakeFiles/RayTracing.dir/Vector.cpp.o.d -o CMakeFiles/RayTracing.dir/Vector.cpp.o -c /Users/cthye/cse167-final/src/Vector.cpp
 
 CMakeFiles/RayTracing.dir/Vector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayTracing.dir/Vector.cpp.i"
-	/opt/homebrew/Cellar/llvm/15.0.0/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cthye/games101/hw7/Vector.cpp > CMakeFiles/RayTracing.dir/Vector.cpp.i
+	/opt/homebrew/Cellar/llvm/15.0.2/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cthye/cse167-final/src/Vector.cpp > CMakeFiles/RayTracing.dir/Vector.cpp.i
 
 CMakeFiles/RayTracing.dir/Vector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayTracing.dir/Vector.cpp.s"
-	/opt/homebrew/Cellar/llvm/15.0.0/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cthye/games101/hw7/Vector.cpp -o CMakeFiles/RayTracing.dir/Vector.cpp.s
+	/opt/homebrew/Cellar/llvm/15.0.2/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cthye/cse167-final/src/Vector.cpp -o CMakeFiles/RayTracing.dir/Vector.cpp.s
 
 CMakeFiles/RayTracing.dir/Scene.cpp.o: CMakeFiles/RayTracing.dir/flags.make
-CMakeFiles/RayTracing.dir/Scene.cpp.o: /Users/cthye/games101/hw7/Scene.cpp
+CMakeFiles/RayTracing.dir/Scene.cpp.o: /Users/cthye/cse167-final/src/Scene.cpp
 CMakeFiles/RayTracing.dir/Scene.cpp.o: CMakeFiles/RayTracing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cthye/games101/hw7/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/RayTracing.dir/Scene.cpp.o"
-	/opt/homebrew/Cellar/llvm/15.0.0/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracing.dir/Scene.cpp.o -MF CMakeFiles/RayTracing.dir/Scene.cpp.o.d -o CMakeFiles/RayTracing.dir/Scene.cpp.o -c /Users/cthye/games101/hw7/Scene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cthye/cse167-final/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/RayTracing.dir/Scene.cpp.o"
+	/opt/homebrew/Cellar/llvm/15.0.2/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracing.dir/Scene.cpp.o -MF CMakeFiles/RayTracing.dir/Scene.cpp.o.d -o CMakeFiles/RayTracing.dir/Scene.cpp.o -c /Users/cthye/cse167-final/src/Scene.cpp
 
 CMakeFiles/RayTracing.dir/Scene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayTracing.dir/Scene.cpp.i"
-	/opt/homebrew/Cellar/llvm/15.0.0/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cthye/games101/hw7/Scene.cpp > CMakeFiles/RayTracing.dir/Scene.cpp.i
+	/opt/homebrew/Cellar/llvm/15.0.2/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cthye/cse167-final/src/Scene.cpp > CMakeFiles/RayTracing.dir/Scene.cpp.i
 
 CMakeFiles/RayTracing.dir/Scene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayTracing.dir/Scene.cpp.s"
-	/opt/homebrew/Cellar/llvm/15.0.0/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cthye/games101/hw7/Scene.cpp -o CMakeFiles/RayTracing.dir/Scene.cpp.s
+	/opt/homebrew/Cellar/llvm/15.0.2/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cthye/cse167-final/src/Scene.cpp -o CMakeFiles/RayTracing.dir/Scene.cpp.s
 
 CMakeFiles/RayTracing.dir/BVH.cpp.o: CMakeFiles/RayTracing.dir/flags.make
-CMakeFiles/RayTracing.dir/BVH.cpp.o: /Users/cthye/games101/hw7/BVH.cpp
+CMakeFiles/RayTracing.dir/BVH.cpp.o: /Users/cthye/cse167-final/src/BVH.cpp
 CMakeFiles/RayTracing.dir/BVH.cpp.o: CMakeFiles/RayTracing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cthye/games101/hw7/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/RayTracing.dir/BVH.cpp.o"
-	/opt/homebrew/Cellar/llvm/15.0.0/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracing.dir/BVH.cpp.o -MF CMakeFiles/RayTracing.dir/BVH.cpp.o.d -o CMakeFiles/RayTracing.dir/BVH.cpp.o -c /Users/cthye/games101/hw7/BVH.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cthye/cse167-final/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/RayTracing.dir/BVH.cpp.o"
+	/opt/homebrew/Cellar/llvm/15.0.2/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracing.dir/BVH.cpp.o -MF CMakeFiles/RayTracing.dir/BVH.cpp.o.d -o CMakeFiles/RayTracing.dir/BVH.cpp.o -c /Users/cthye/cse167-final/src/BVH.cpp
 
 CMakeFiles/RayTracing.dir/BVH.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayTracing.dir/BVH.cpp.i"
-	/opt/homebrew/Cellar/llvm/15.0.0/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cthye/games101/hw7/BVH.cpp > CMakeFiles/RayTracing.dir/BVH.cpp.i
+	/opt/homebrew/Cellar/llvm/15.0.2/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cthye/cse167-final/src/BVH.cpp > CMakeFiles/RayTracing.dir/BVH.cpp.i
 
 CMakeFiles/RayTracing.dir/BVH.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayTracing.dir/BVH.cpp.s"
-	/opt/homebrew/Cellar/llvm/15.0.0/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cthye/games101/hw7/BVH.cpp -o CMakeFiles/RayTracing.dir/BVH.cpp.s
+	/opt/homebrew/Cellar/llvm/15.0.2/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cthye/cse167-final/src/BVH.cpp -o CMakeFiles/RayTracing.dir/BVH.cpp.s
 
 CMakeFiles/RayTracing.dir/Renderer.cpp.o: CMakeFiles/RayTracing.dir/flags.make
-CMakeFiles/RayTracing.dir/Renderer.cpp.o: /Users/cthye/games101/hw7/Renderer.cpp
+CMakeFiles/RayTracing.dir/Renderer.cpp.o: /Users/cthye/cse167-final/src/Renderer.cpp
 CMakeFiles/RayTracing.dir/Renderer.cpp.o: CMakeFiles/RayTracing.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cthye/games101/hw7/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/RayTracing.dir/Renderer.cpp.o"
-	/opt/homebrew/Cellar/llvm/15.0.0/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracing.dir/Renderer.cpp.o -MF CMakeFiles/RayTracing.dir/Renderer.cpp.o.d -o CMakeFiles/RayTracing.dir/Renderer.cpp.o -c /Users/cthye/games101/hw7/Renderer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cthye/cse167-final/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/RayTracing.dir/Renderer.cpp.o"
+	/opt/homebrew/Cellar/llvm/15.0.2/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RayTracing.dir/Renderer.cpp.o -MF CMakeFiles/RayTracing.dir/Renderer.cpp.o.d -o CMakeFiles/RayTracing.dir/Renderer.cpp.o -c /Users/cthye/cse167-final/src/Renderer.cpp
 
 CMakeFiles/RayTracing.dir/Renderer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RayTracing.dir/Renderer.cpp.i"
-	/opt/homebrew/Cellar/llvm/15.0.0/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cthye/games101/hw7/Renderer.cpp > CMakeFiles/RayTracing.dir/Renderer.cpp.i
+	/opt/homebrew/Cellar/llvm/15.0.2/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cthye/cse167-final/src/Renderer.cpp > CMakeFiles/RayTracing.dir/Renderer.cpp.i
 
 CMakeFiles/RayTracing.dir/Renderer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RayTracing.dir/Renderer.cpp.s"
-	/opt/homebrew/Cellar/llvm/15.0.0/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cthye/games101/hw7/Renderer.cpp -o CMakeFiles/RayTracing.dir/Renderer.cpp.s
+	/opt/homebrew/Cellar/llvm/15.0.2/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cthye/cse167-final/src/Renderer.cpp -o CMakeFiles/RayTracing.dir/Renderer.cpp.s
 
 # Object files for target RayTracing
 RayTracing_OBJECTS = \
@@ -157,7 +157,7 @@ RayTracing: CMakeFiles/RayTracing.dir/BVH.cpp.o
 RayTracing: CMakeFiles/RayTracing.dir/Renderer.cpp.o
 RayTracing: CMakeFiles/RayTracing.dir/build.make
 RayTracing: CMakeFiles/RayTracing.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/cthye/games101/hw7/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable RayTracing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/cthye/cse167-final/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable RayTracing"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RayTracing.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -169,6 +169,6 @@ CMakeFiles/RayTracing.dir/clean:
 .PHONY : CMakeFiles/RayTracing.dir/clean
 
 CMakeFiles/RayTracing.dir/depend:
-	cd /Users/cthye/games101/hw7/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/cthye/games101/hw7 /Users/cthye/games101/hw7 /Users/cthye/games101/hw7/build /Users/cthye/games101/hw7/build /Users/cthye/games101/hw7/build/CMakeFiles/RayTracing.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/cthye/cse167-final/src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/cthye/cse167-final/src /Users/cthye/cse167-final/src /Users/cthye/cse167-final/src/build /Users/cthye/cse167-final/src/build /Users/cthye/cse167-final/src/build/CMakeFiles/RayTracing.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/RayTracing.dir/depend
 

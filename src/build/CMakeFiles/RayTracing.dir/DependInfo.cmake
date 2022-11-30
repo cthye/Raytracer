@@ -8,11 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/cthye/games101/hw7/BVH.cpp" "CMakeFiles/RayTracing.dir/BVH.cpp.o" "gcc" "CMakeFiles/RayTracing.dir/BVH.cpp.o.d"
-  "/Users/cthye/games101/hw7/Renderer.cpp" "CMakeFiles/RayTracing.dir/Renderer.cpp.o" "gcc" "CMakeFiles/RayTracing.dir/Renderer.cpp.o.d"
-  "/Users/cthye/games101/hw7/Scene.cpp" "CMakeFiles/RayTracing.dir/Scene.cpp.o" "gcc" "CMakeFiles/RayTracing.dir/Scene.cpp.o.d"
-  "/Users/cthye/games101/hw7/Vector.cpp" "CMakeFiles/RayTracing.dir/Vector.cpp.o" "gcc" "CMakeFiles/RayTracing.dir/Vector.cpp.o.d"
-  "/Users/cthye/games101/hw7/main.cpp" "CMakeFiles/RayTracing.dir/main.cpp.o" "gcc" "CMakeFiles/RayTracing.dir/main.cpp.o.d"
+  "/Users/cthye/cse167-final/src/BVH.cpp" "CMakeFiles/RayTracing.dir/BVH.cpp.o" "gcc" "CMakeFiles/RayTracing.dir/BVH.cpp.o.d"
+  "/Users/cthye/cse167-final/src/Renderer.cpp" "CMakeFiles/RayTracing.dir/Renderer.cpp.o" "gcc" "CMakeFiles/RayTracing.dir/Renderer.cpp.o.d"
+  "/Users/cthye/cse167-final/src/Scene.cpp" "CMakeFiles/RayTracing.dir/Scene.cpp.o" "gcc" "CMakeFiles/RayTracing.dir/Scene.cpp.o.d"
+  "/Users/cthye/cse167-final/src/Vector.cpp" "CMakeFiles/RayTracing.dir/Vector.cpp.o" "gcc" "CMakeFiles/RayTracing.dir/Vector.cpp.o.d"
+  "/Users/cthye/cse167-final/src/main.cpp" "CMakeFiles/RayTracing.dir/main.cpp.o" "gcc" "CMakeFiles/RayTracing.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links.

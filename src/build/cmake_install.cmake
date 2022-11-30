@@ -1,4 +1,4 @@
-# Install script for directory: /Users/cthye/games101/hw7
+# Install script for directory: /Users/cthye/cse167-final/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/cthye/games101/hw7/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/cthye/cse167-final/src/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
