@@ -15,10 +15,10 @@ struct hit_payload
 class Renderer
 {
 public:
-    Vector3f eye_pos = Vector3f(278., 273., -800.);
+    // Vector3f eye_pos = Vector3f(278., 273., -800.);
     std::vector<Vector3f>* framebuffer;
-    // int spp = 16;
-    int spp = 512;
+    int spp = 16;
+    // int spp = 512;
     int THREAD_NUMBER = 16;
     int renderedPixels = 0;
 

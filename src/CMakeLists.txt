@@ -4,7 +4,7 @@ project(RayTracing)
 set(CMAKE_CXX_STANDARD 17)
 
 if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-  set(CMAKE_CXX_COMPILER "/opt/homebrew/Cellar/llvm/15.0.0/bin/clang++")
+  # set(CMAKE_CXX_COMPILER "/opt/homebrew/Cellar/llvm/15.0.0/bin/clang++")
   set(CMAKE_CXX_COMPILER "/opt/homebrew/Cellar/llvm/15.0.2/bin/clang++")
   set(CMAKE_CXX_FLAGS "${CAMKE_CXX_FLAGS} -fopenmp")
 endif()

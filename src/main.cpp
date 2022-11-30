@@ -45,13 +45,22 @@ int main(int argc, char** argv)
     MeshTriangle right("../models/cornellbox/right.obj", "right", green);
     MeshTriangle light_("../models/cornellbox/light.obj", "light", light);
 
+    // MeshTriangle floor("../models/cornellbox/floor.obj", Vector3f(-600, -60, -600), Vector3f(1, 1, 1), Vector3f(1, 0, 0), Vector3f(0, 1, 0), Vector3f(0, 0, 1), white);
+    // MeshTriangle shortbox("../models/cornellbox/shortbox.obj", Vector3f(-600, -60, -600), Vector3f(1, 1, 1), Vector3f(1, 0, 0), Vector3f(0, 1, 0), Vector3f(0, 0, 1), white);
+    // MeshTriangle tallbox("../models/cornellbox/tallbox.obj", Vector3f(-600, -60, -600), Vector3f(1, 1, 1), Vector3f(1, 0, 0), Vector3f(0, 1, 0), Vector3f(0, 0, 1), white);
+    // MeshTriangle bunny("../models/bunny/bunny.obj", Vector3f(0, -60, -300), Vector3f(1500, 1500, 1500), Vector3f(1, 0, 0), Vector3f(0, 1, 0), Vector3f(0, 0, 1), pink);
+    // MeshTriangle left("../models/cornellbox/left.obj", "left", red);
+    // MeshTriangle right("../models/cornellbox/right.obj", "right", green);
+    // MeshTriangle light_("../models/cornellbox/light.obj", "light", light);
+
+
     scene.Add(&floor);
     scene.Add(&shortbox);
     scene.Add(&tallbox);
     scene.Add(&left);
     scene.Add(&right);
     scene.Add(&light_);
-    // scene.Add(&bunny);
+    scene.Add(&bunny);
 
     scene.buildBVH();
 

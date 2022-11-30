@@ -17,19 +17,41 @@ class Scene
 {
 public:
     // setting up options
-    int width = 1280;
-    int height = 960;
+    
+    //camera
+    Vector3f eye_pos = Vector3f(278., 273., -800.);
+    // Vector3f eye_pos = Vector3f(0.f, 0.f, 1.f);
+    Vector3f target = Vector3f(0.f, 0.f, 0.f); 
+    Vector3f vup = Vector3f(0.f, 1.f, 0.f); 
+    int width;
+    int height; 
     double fov = 40;
+    float scale = tan(deg2rad(fov * 0.5));
+    float imageAspectRatio = width / (float)height;
+    float viewportHeight = scale * 2.f; // y [-1, 1], z = 1
+    float viewportWidth = imageAspectRatio * viewportHeight;
+    Vector3f w = normalize(eye_pos - target);
+    Vector3f u = crossProduct(vup, w);
+    Vector3f v = crossProduct(w, u);
+    Vector3f horizontal = viewportWidth * u;
+    Vector3f vertical = viewportHeight * v;
+    Vector3f lower_left_corner = eye_pos - horizontal/2.f - vertical/2.f - w;
+
     Vector3f backgroundColor = Vector3f(0.235294, 0.67451, 0.843137);
     int maxDepth = 1;
     float RussianRoulette = 0.8;
-    float scale = tan(deg2rad(fov * 0.5));
-    float imageAspectRatio = width / (float)height;
+
 
     Scene(int w, int h) : width(w), height(h)
     {
         scale = tan(deg2rad(fov * 0.5));
         imageAspectRatio = w / (float)h;
+        // std::cout << "lower_left_corner " << lower_left_corner << std::endl;
+        // std::cout << "horizontal " << horizontal << std::endl;
+        // std::cout << "vertical " << vertical << std::endl;
+        // std::cout << "w " << this->w << std::endl;
+        // std::cout << "u " << u << std::endl;
+        // std::cout << "v " << v << std::endl;
     }
 
     void Add(Object *object) { objects.push_back(object); }

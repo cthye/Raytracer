@@ -74,18 +74,26 @@ void Renderer::MultiThreadRender(int tid, const Scene& scene) {
                 // std::cout << "thread" << tid << "'s dir" << dir  << std::endl;
                 int width, height;
                 float step = 1. / width;
-                width = height = sqrt(spp);
+                // width = height = sqrt(spp);
                 //MSAA抗锯齿
                 for (int k = 0; k < spp; k++) {
-                    float x = (2 * (i + step / 2 + step * (k % width)) / (float)scene.width - 1) *
+                    // float x = (2 * (i + step / 2 + step * (k % width)) / (float)scene.width - 1) *
+                    //       scene.imageAspectRatio * scene.scale;
+                    // float y = (1 - 2 * (j + step / 2 + step * (k / height)) / (float)scene.height) * scene.scale;
+                    float x = (2 * (i + 0.5 + get_random_float()) / (float)scene.width - 1) *
                           scene.imageAspectRatio * scene.scale;
-                    float y = (1 - 2 * (j + step / 2 + step * (k / height)) / (float)scene.height) * scene.scale;
+                    float y = (1 - 2 * (j + 0.5 + get_random_float()) / (float)scene.height) * scene.scale;
                     //? 为什么不用减去eye_pos?
                     Vector3f dir = normalize(Vector3f(-x, y, 1));
 
+                    // float x = 2 * (i + 0.5 + get_random_float()) / (float)scene.width - 1;
+                    // float y = 1 - 2 * (j + 0.5 + get_random_float()) / (float)scene.height;
+                    // Vector3f dir  = normalize(scene.lower_left_corner + x*scene.horizontal + y*scene.vertical - scene.eye_pos);
+                    // std::cout << dir << std::endl;
                     (*framebuffer)[m] +=
-                        scene.castRay(Ray(eye_pos, dir), 0) / spp;
+                        scene.castRay(Ray(scene.eye_pos, dir), 0);
                 }
+                (*framebuffer)[m] = (*framebuffer)[m] / spp;
                 lock.lock();
                 UpdateProgress(++renderedPixels /
                                ((float)scene.height * scene.width));
