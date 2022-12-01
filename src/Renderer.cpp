@@ -80,9 +80,9 @@ void Renderer::MultiThreadRender(int tid, const Scene& scene) {
                     // float x = (2 * (i + step / 2 + step * (k % width)) / (float)scene.width - 1) *
                     //       scene.imageAspectRatio * scene.scale;
                     // float y = (1 - 2 * (j + step / 2 + step * (k / height)) / (float)scene.height) * scene.scale;
-                    float x = (2 * (i + 0.5 + get_random_float()) / (float)scene.width - 1) *
+                    float x = (2 * (i + get_random_float()) / (float)scene.width - 1) *
                           scene.imageAspectRatio * scene.scale;
-                    float y = (1 - 2 * (j + 0.5 + get_random_float()) / (float)scene.height) * scene.scale;
+                    float y = (1 - 2 * (j + get_random_float()) / (float)scene.height) * scene.scale;
                     //? 为什么不用减去eye_pos?
                     Vector3f dir = normalize(Vector3f(-x, y, 1));
 

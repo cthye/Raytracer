@@ -75,14 +75,6 @@ public:
     bool intersect(const Ray& ray, float& tnear,
                    uint32_t& index) const override;
     Intersection getIntersection(Ray ray) override;
-    void getSurfaceProperties(const Vector3f& P, const Vector3f& I,
-                              const uint32_t& index, const Vector2f& uv,
-                              Vector3f& N, Vector2f& st) const override
-    {
-        N = normal;
-        //        throw std::runtime_error("triangle::getSurfaceProperties not
-        //        implemented.");
-    }
     Vector3f evalDiffuseColor(const Vector2f&) const override;
     Bounds3 getBounds() override;
     void Sample(Intersection &pos, float &pdf) override {
@@ -140,16 +132,16 @@ public:
                                     std::max(max_vert.z, vert.z));
             }
 
-            triangles.emplace_back(face_vertices[0], face_vertices[1],
-                                   face_vertices[2], mt);
+            triangles.emplace_back(std::make_shared<Triangle>(face_vertices[0], face_vertices[1],
+                                   face_vertices[2], mt));
         }
 
         bounding_box = Bounds3(min_vert, max_vert);
 
-        std::vector<Object*> ptrs;
+        std::vector<std::shared_ptr<Object>> ptrs;
         for (auto& tri : triangles){
-            ptrs.push_back(&tri);
-            area += tri.area;
+            ptrs.push_back(tri);
+            area += tri->area;
         }
         bvh = new BVHAccel(ptrs);
     }
@@ -187,16 +179,16 @@ public:
                                     std::max(max_vert.z, vert.z));
             }
 
-            triangles.emplace_back(face_vertices[0], face_vertices[1],
-                                   face_vertices[2], _name, mt);
+            triangles.emplace_back(std::make_shared<Triangle>(face_vertices[0], face_vertices[1],
+                                   face_vertices[2], _name, mt));
         }
 
         bounding_box = Bounds3(min_vert, max_vert);
 
-        std::vector<Object*> ptrs;
+        std::vector<std::shared_ptr<Object>> ptrs;
         for (auto& tri : triangles){
-            ptrs.push_back(&tri);
-            area += tri.area;
+            ptrs.push_back(tri);
+            area += tri->area;
         }
         bvh = new BVHAccel(ptrs);
     }
@@ -239,16 +231,16 @@ public:
                                     std::max(max_vert.z, vert.z));
             }
 
-            triangles.emplace_back(face_vertices[0], face_vertices[1],
-                                   face_vertices[2], mt);
+            triangles.emplace_back(std::make_shared<Triangle>(face_vertices[0], face_vertices[1],
+                                   face_vertices[2], mt));
         }
 
         bounding_box = Bounds3(min_vert, max_vert);
 
-        std::vector<Object*> ptrs;
+        std::vector<std::shared_ptr<Object>> ptrs;
         for (auto& tri : triangles){
-            ptrs.push_back(&tri);
-            area += tri.area;
+            ptrs.push_back(tri);
+            area += tri->area;
         }
         bvh = new BVHAccel(ptrs);
     }
@@ -277,22 +269,6 @@ public:
     }
 
     Bounds3 getBounds() { return bounding_box; }
-
-    void getSurfaceProperties(const Vector3f& P, const Vector3f& I,
-                              const uint32_t& index, const Vector2f& uv,
-                              Vector3f& N, Vector2f& st) const
-    {
-        const Vector3f& v0 = vertices[vertexIndex[index * 3]];
-        const Vector3f& v1 = vertices[vertexIndex[index * 3 + 1]];
-        const Vector3f& v2 = vertices[vertexIndex[index * 3 + 2]];
-        Vector3f e0 = normalize(v1 - v0);
-        Vector3f e1 = normalize(v2 - v1);
-        N = normalize(crossProduct(e0, e1));
-        const Vector2f& st0 = stCoordinates[vertexIndex[index * 3]];
-        const Vector2f& st1 = stCoordinates[vertexIndex[index * 3 + 1]];
-        const Vector2f& st2 = stCoordinates[vertexIndex[index * 3 + 2]];
-        st = st0 * (1 - uv.x - uv.y) + st1 * uv.x + st2 * uv.y;
-    }
 
     Vector3f evalDiffuseColor(const Vector2f& st) const
     {
@@ -331,12 +307,12 @@ public:
     }
 
     Bounds3 bounding_box;
-    std::unique_ptr<Vector3f[]> vertices;
+    std::shared_ptr<Vector3f[]> vertices;
     uint32_t numTriangles;
-    std::unique_ptr<uint32_t[]> vertexIndex;
-    std::unique_ptr<Vector2f[]> stCoordinates;
+    std::shared_ptr<uint32_t[]> vertexIndex;
+    std::shared_ptr<Vector2f[]> stCoordinates;
 
-    std::vector<Triangle> triangles;
+    std::vector<std::shared_ptr<Triangle>> triangles;
 
     BVHAccel* bvh;
     float area;

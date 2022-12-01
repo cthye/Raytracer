@@ -30,13 +30,6 @@ int main(int argc, char** argv)
     Material* light = new Material(DIFFUSE, (8.0f * Vector3f(0.747f+0.058f, 0.747f+0.258f, 0.747f) + 15.6f * Vector3f(0.740f+0.287f,0.740f+0.160f,0.740f) + 18.4f *Vector3f(0.737f+0.642f,0.737f+0.159f,0.737f)));
     light->Kd = Vector3f(0.65f);
 
-    // MeshTriangle floor("../models/cornellbox/floor.obj", white);
-    // MeshTriangle shortbox("../models/cornellbox/shortbox.obj", white);
-    // MeshTriangle tallbox("../models/cornellbox/tallbox.obj", white);
-    // MeshTriangle left("../models/cornellbox/left.obj", red);
-    // MeshTriangle right("../models/cornellbox/right.obj", green);
-    // MeshTriangle light_("../models/cornellbox/light.obj", light);
-
     MeshTriangle floor("../models/cornellbox/floor.obj", "floor", white);
     MeshTriangle shortbox("../models/cornellbox/shortbox.obj", "shortbox", white);
     MeshTriangle tallbox("../models/cornellbox/tallbox.obj", "tallbox", white);
@@ -54,13 +47,13 @@ int main(int argc, char** argv)
     // MeshTriangle light_("../models/cornellbox/light.obj", "light", light);
 
 
-    scene.Add(&floor);
-    scene.Add(&shortbox);
-    scene.Add(&tallbox);
-    scene.Add(&left);
-    scene.Add(&right);
-    scene.Add(&light_);
-    scene.Add(&bunny);
+    scene.Add(std::make_shared<MeshTriangle>(floor));
+    scene.Add(std::make_shared<MeshTriangle>(shortbox));
+    scene.Add(std::make_shared<MeshTriangle>(tallbox));
+    scene.Add(std::make_shared<MeshTriangle>(left));
+    scene.Add(std::make_shared<MeshTriangle>(right));
+    scene.Add(std::make_shared<MeshTriangle>(light_));
+    scene.Add(std::make_shared<MeshTriangle>(bunny));
 
     scene.buildBVH();
 

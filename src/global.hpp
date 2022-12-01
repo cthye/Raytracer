@@ -7,7 +7,6 @@
 #define M_PI 3.141592653589793f
 
 extern const float  EPSILON;
-const float kInfinity = std::numeric_limits<float>::max();
 inline float deg2rad(const float& deg) { return deg * M_PI / 180.0; }
 inline float clamp(const float &lo, const float &hi, const float &v)
 { return std::max(lo, std::min(hi, v)); }
