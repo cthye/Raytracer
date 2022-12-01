@@ -787,7 +787,6 @@ CMakeFiles/RayTracing.dir/main.cpp.o: \
   /Users/cthye/cse167-final/src/Intersection.hpp \
   /Users/cthye/cse167-final/src/Material.hpp \
   /Users/cthye/cse167-final/src/Light.hpp \
-  /Users/cthye/cse167-final/src/AreaLight.hpp \
   /Users/cthye/cse167-final/src/BVH.hpp \
   /Users/cthye/cse167-final/src/Triangle.hpp \
   /Users/cthye/cse167-final/src/OBJ_Loader.hpp \

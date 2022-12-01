@@ -3,26 +3,34 @@
 
 CMakeFiles/RayTracing.dir/BVH.cpp.o: /Users/cthye/cse167-final/src/BVH.cpp \
   /Users/cthye/cse167-final/src/BVH.hpp \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/atomic \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__assert \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/vector \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/copy.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/unwrap_iter.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__config \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__config_site \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/iterator_traits.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/incrementable_traits.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_primary_template.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/enable_if.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_same.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/integral_constant.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_valid_expansion.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/concepts \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__assert \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__verbose_abort \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__availability \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/duration.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/limits \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/arithmetic.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_signed_integer.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_unsigned_integer.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/type_traits \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/invoke.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/add_lvalue_reference.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_referenceable.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/integral_constant.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_same.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/apply_cv.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_const.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_volatile.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/remove_reference.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/cstddef \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/enable_if.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_integral.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/remove_cv.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/remove_const.h \
@@ -159,167 +167,11 @@ CMakeFiles/RayTracing.dir/BVH.cpp.o: /Users/cthye/cse167-final/src/BVH.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_uintptr_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_intmax_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uintmax_t.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__undef_macros \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/ratio \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/climits \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/limits.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/lib/clang/15.0.2/include/limits.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/limits.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/limits.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/limits.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/_limits.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/syslimits.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__thread/poll_with_backoff.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/high_resolution_clock.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/steady_clock.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/time_point.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/system_clock.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/ctime \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/time.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/Availability.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/AvailabilityVersions.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/AvailabilityInternal.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_clock_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_null.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_size_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_time_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_timespec.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__filesystem/file_time_type.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/file_clock.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__thread/timed_backoff_policy.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__threading_support \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/convert_to_timespec.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/errno.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/errno.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/errno.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_errno_t.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/iosfwd \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__mbstate_t.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/wchar.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/wchar.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_mbstate_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_ct_rune_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_rune_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_wchar_t.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/lib/clang/15.0.2/include/stdarg.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/stdio.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdio.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_stdio.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_va_list.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/stdio.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_ctermid.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_off_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_ssize_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_wctype.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/__wctype.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_wint_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_wctype_t.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/ctype.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/ctype.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_ctype.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/runetype.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/pthread.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/pthread/sched.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/pthread/pthread_impl.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_attr_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_cond_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_condattr_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_key_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_mutex_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_mutexattr_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_once_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_rwlock_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_rwlockattr_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/pthread/qos.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/qos.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_mach_port_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_sigset_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sched.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/cstring \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/string.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/string.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_rsize_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/strings.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/chrono \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/calendar.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/day.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/compare \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/common_comparison_category.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/ordering.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/compare_partial_order_fallback.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/partial_order.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/compare_three_way.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/three_way_comparable.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/assignable.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/common_reference_with.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/convertible_to.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/same_as.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/equality_comparable.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/boolean_testable.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/totally_ordered.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/weak_order.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/strong_order.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__bit/bit_cast.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/priority_tag.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/cmath \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/math.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/math.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/promote.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/stdlib.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdlib.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/wait.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_pid_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_id_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/signal.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/appleapiopts.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/signal.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/signal.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/_mcontext.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/_mcontext.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/mach/machine/_structs.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/mach/arm/_structs.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_sigaltstack.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_ucontext.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_uid_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/resource.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_timeval.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/endian.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/endian.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_endian.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/libkern/_OSByteOrder.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/libkern/arm/OSByteOrder.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/arch.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/alloca.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/malloc/_malloc.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_dev_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_mode_t.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/compare_strong_order_fallback.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/compare_three_way_result.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/compare_weak_order_fallback.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/is_eq.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/hh_mm_ss.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/literals.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/year.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/month.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/month_weekday.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/weekday.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/monthday.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/year_month.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/year_month_day.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/year_month_weekday.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/vector \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/copy.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/unwrap_iter.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/iterator_traits.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/incrementable_traits.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_primary_template.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_valid_expansion.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/concepts \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/arithmetic.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_signed_integer.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_unsigned_integer.h \
-  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/assignable.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/class_or_enum.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/common_with.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/constructible.h \
@@ -331,11 +183,13 @@ CMakeFiles/RayTracing.dir/BVH.cpp.o: /Users/cthye/cse167-final/src/BVH.cpp \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/move.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/derived_from.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/different_from.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/equality_comparable.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/invocable.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/predicate.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/regular.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/semiregular.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/relation.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/totally_ordered.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/readable_traits.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/pointer_traits.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/addressof.h \
@@ -346,12 +200,57 @@ CMakeFiles/RayTracing.dir/BVH.cpp.o: /Users/cthye/cse167-final/src/BVH.cpp \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/advance.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/unreachable.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/cstdlib \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/stdlib.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdlib.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/Availability.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/AvailabilityVersions.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/AvailabilityInternal.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/wait.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_pid_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_id_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/signal.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/appleapiopts.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/signal.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/signal.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/_mcontext.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/_mcontext.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/mach/machine/_structs.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/mach/arm/_structs.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_attr_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_sigaltstack.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_ucontext.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_sigset_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_size_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_uid_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/resource.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_timeval.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/endian.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/endian.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_endian.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/libkern/_OSByteOrder.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/libkern/arm/OSByteOrder.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/arch.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/alloca.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_ct_rune_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_rune_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_wchar_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_null.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/malloc/_malloc.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_dev_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_mode_t.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/limits \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__undef_macros \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/pair.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/common_comparison_category.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/ordering.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/synth_three_way.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/three_way_comparable.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/unwrap_ref.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__tuple \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/piecewise_construct.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/reverse_iterator.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/compare_three_way_result.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/iter_swap.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/iterator.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/prev.h \
@@ -367,6 +266,13 @@ CMakeFiles/RayTracing.dir/BVH.cpp.o: /Users/cthye/cse167-final/src/BVH.cpp \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__ranges/dangling.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__ranges/view_interface.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__ranges/empty.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/cstring \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/string.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/string.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_rsize_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_errno_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_ssize_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/strings.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/equal.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/comp.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/distance.h \
@@ -411,6 +317,31 @@ CMakeFiles/RayTracing.dir/BVH.cpp.o: /Users/cthye/cse167-final/src/BVH.cpp \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/new \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/exception \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/stdexcept \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/iosfwd \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__mbstate_t.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/wchar.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/wchar.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_mbstate_t.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/lib/clang/15.0.2/include/stdarg.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/stdio.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdio.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_stdio.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_va_list.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/stdio.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_ctermid.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_off_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/time.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_clock_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_time_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_timespec.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_wctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/__wctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_wint_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_wctype_t.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/ctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/ctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_ctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/runetype.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/compressed_pair.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/tuple \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/allocator_arg_t.h \
@@ -421,9 +352,24 @@ CMakeFiles/RayTracing.dir/BVH.cpp.o: /Users/cthye/cse167-final/src/BVH.cpp \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/as_const.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/cmp.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/in_place.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/priority_tag.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/rel_ops.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/to_underlying.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/transaction.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/compare \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/compare_partial_order_fallback.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/partial_order.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/compare_three_way.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/weak_order.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/strong_order.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__bit/bit_cast.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/cmath \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/math.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/math.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/promote.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/compare_strong_order_fallback.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/compare_weak_order_fallback.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/is_eq.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/memory \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/allocation_guard.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/assume_aligned.h \
@@ -440,6 +386,60 @@ CMakeFiles/RayTracing.dir/BVH.cpp.o: /Users/cthye/cse167-final/src/BVH.cpp \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/reference_wrapper.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/weak_result_type.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/unique_ptr.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/atomic \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/duration.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/ratio \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/climits \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/limits.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/lib/clang/15.0.2/include/limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/_limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/syslimits.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__thread/poll_with_backoff.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/high_resolution_clock.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/steady_clock.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/time_point.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/system_clock.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/ctime \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__filesystem/file_time_type.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/file_clock.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__thread/timed_backoff_policy.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__threading_support \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/convert_to_timespec.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/errno.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/errno.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/errno.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/pthread.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/pthread/sched.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/pthread/pthread_impl.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_cond_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_condattr_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_key_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_mutex_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_mutexattr_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_once_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_rwlock_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_rwlockattr_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/pthread/qos.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/qos.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_mach_port_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sched.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/chrono \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/calendar.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/day.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/hh_mm_ss.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/literals.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/year.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/month.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/month_weekday.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/weekday.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/monthday.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/year_month.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/year_month_day.h \
+  /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/year_month_weekday.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/temporary_buffer.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/iterator \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/back_insert_iterator.h \
@@ -1578,7 +1578,6 @@ CMakeFiles/RayTracing.dir/Renderer.cpp.o: /Users/cthye/cse167-final/src/Renderer
   /Users/cthye/cse167-final/src/Intersection.hpp \
   /Users/cthye/cse167-final/src/Material.hpp \
   /Users/cthye/cse167-final/src/Light.hpp \
-  /Users/cthye/cse167-final/src/AreaLight.hpp \
   /Users/cthye/cse167-final/src/BVH.hpp \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/fstream \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/filesystem \
@@ -2388,7 +2387,6 @@ CMakeFiles/RayTracing.dir/Scene.cpp.o: /Users/cthye/cse167-final/src/Scene.cpp \
   /Users/cthye/cse167-final/src/Intersection.hpp \
   /Users/cthye/cse167-final/src/Material.hpp \
   /Users/cthye/cse167-final/src/Light.hpp \
-  /Users/cthye/cse167-final/src/AreaLight.hpp \
   /Users/cthye/cse167-final/src/BVH.hpp
 
 CMakeFiles/RayTracing.dir/Vector.cpp.o: /Users/cthye/cse167-final/src/Vector.cpp \
@@ -3911,7 +3909,6 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
   /Users/cthye/cse167-final/src/Intersection.hpp \
   /Users/cthye/cse167-final/src/Material.hpp \
   /Users/cthye/cse167-final/src/Light.hpp \
-  /Users/cthye/cse167-final/src/AreaLight.hpp \
   /Users/cthye/cse167-final/src/BVH.hpp \
   /Users/cthye/cse167-final/src/Triangle.hpp \
   /Users/cthye/cse167-final/src/OBJ_Loader.hpp \
@@ -3956,8 +3953,6 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/iomanip:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__filesystem/file_type.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__filesystem/file_status.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/iterator_operations.h:
 
@@ -4049,9 +4044,9 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__random/gamma_distribution.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_array.h:
-
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/set_difference.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_array.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/assert.h:
 
@@ -4136,8 +4131,6 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_in_port_t.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/array:
-
-/Users/cthye/cse167-final/src/AreaLight.hpp:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__bit_reference:
 
@@ -4505,255 +4498,17 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/iterator:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/weak_result_type.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/binary_function.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/shared_ptr.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__debug:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_upper_bound.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_trivially_copyable.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/uninitialized_algorithms.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/ranges_construct_at.h:
-
-/Users/cthye/cse167-final/src/Vector.hpp:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/in_out_result.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_u_char.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/random:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/inplace_merge.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/concepts.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/transaction.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/month_weekday.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/in_place.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/cmp.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/find_if_not.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/count.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/allocate_at_least.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/as_const.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_shuffle.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/add_rvalue_reference.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/front_insert_iterator.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/enable_if.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/allocator_arg_t.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/compressed_pair.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_reverse_copy.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/time_point.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/move_iterator.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/max_element.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sched.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/initializer_list:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/back_insert_iterator.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/copy_cvref.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/max.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/distance.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__split_buffer:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/swap_allocator.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/allocator_traits.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/operations.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_partition_point.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/wrap_iter.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/climits:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_once_t.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/unary_function.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/appleapiopts.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/hash.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__format/enable_insertable.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/voidify.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/_mcontext.h:
-
-/Users/cthye/cse167-final/src/Ray.hpp:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/construct_at.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/in_fun_result.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__bits:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/identity.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/move_backward.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/remove_if.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/string_view:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/ostream_iterator.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_merge.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/find.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/comp_ref_type.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/equal.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/binary_search.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__ranges/empty.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/stable_partition.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/advance.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_inplace_merge.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/types.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__ranges/view_interface.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__random/mersenne_twister_engine.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__ranges/enable_view.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/prev.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/iterator.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/types.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/add_const.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_replace_copy.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint8_t.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/reverse_iterator.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/unwrap_ref.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/synth_three_way.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/iter_swap.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/none_of.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/istream_iterator.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_rwlock_t.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/cstdlib:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/lexicographical_compare.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_lexicographical_compare.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/nat.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_symbol_aliasing.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/next.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/unwrap_range.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/strings.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_size_t.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/totally_ordered.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/addressof.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/ranges_operations.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/readable_traits.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/functional:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/move.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/stdio.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/swappable.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/movable.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/partial_sort_copy.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/destructible.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/constructible.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/types.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_aggregate.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/common_with.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_standard_layout.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_unsigned_integer.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/priority_tag.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/semiregular.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/remove_reference.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_fd_setsize.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/equal_range.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/unwrap_iter.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/remove.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/Availability.h:
-
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/year_month_weekday.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/monthday.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/weekday.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_dev_t.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/in_place.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/auto_cast.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/month_weekday.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/month.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/derived_from.h:
 
@@ -4771,7 +4526,371 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/hh_mm_ss.h:
 
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_generate_n.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_iterator_concept.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/calendar.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/chrono:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/back_insert_iterator.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/initializer_list:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sched.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_stable_partition.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_mach_port_t.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/copy_backward.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/qos.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_mutexattr_t.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_minmax.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/is_eq.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_set_union.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/file_clock.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_mutex_t.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_key_t.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_condattr_t.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_remove_copy.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_cond_t.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/errno.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_count_if.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/errno.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/default_searcher.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/invoke.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/convert_to_timespec.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_nlink_t.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_stable_sort.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/mem_fun_ref.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/system_clock.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/binder2nd.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__random/uniform_real_distribution.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/move_iterator.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/time_point.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__numeric/transform_exclusive_scan.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/move.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/functional:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/voidify.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__filesystem/recursive_directory_iterator.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__random/uniform_int_distribution.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/invocable.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/lib/clang/15.0.2/include/limits.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__ranges/empty.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/binary_search.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/limits.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/comp.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/allocation_guard.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/unary_function.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_once_t.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/climits:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/pthread/sched.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__filesystem/perm_options.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/reference_wrapper.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/binary_function.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/ranges_construct_at.h:
+
+/Users/cthye/cse167-final/src/Vector.hpp:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/in_out_result.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/random:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/inplace_merge.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/concepts.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/__wctype.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/auto_ptr.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__random/generate_canonical.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/ctime:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/assume_aligned.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/different_from.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__bit/bit_cast.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/compare_partial_order_fallback.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/find_if_not.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/count.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/allocate_at_least.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/as_const.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/swap.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__thread/poll_with_backoff.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_wint_t.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/tuple:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/compressed_pair.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/boolean_testable.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_ctype.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_is_permutation.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/lib/clang/15.0.2/include/stdint.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_timespec.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/ctype.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/partial_order.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/time.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_off_t.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_trivially_default_constructible.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/merge.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/compare_strong_order_fallback.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__fwd/string_view.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/steady_clock.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_ctermid.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_trivially_copy_constructible.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/ctype.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_id_t.h:
+
+/Users/cthye/cse167-final/src/Intersection.hpp:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/wchar.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_mbstate_t.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/streambuf:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/math.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__mbstate_t.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/convertible_to.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/exception:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/new:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/cmath:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/allocator.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/swap_allocator.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/wrap_iter.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/appleapiopts.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/hash.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__format/enable_insertable.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/max_element.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/_mcontext.h:
+
+/Users/cthye/cse167-final/src/Ray.hpp:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/construct_at.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/in_fun_result.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__bits:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/priority_tag.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_wctype.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_types.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/copy_n.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/identity.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/move_backward.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_rsize_t.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/limits.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_va_list.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_u_char.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/remove_if.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/shared_ptr.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/string_view:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/ostream_iterator.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_merge.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/find.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/comp_ref_type.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/promote.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/swap_ranges.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/is_heap.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_lexicographical_compare.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/lexicographical_compare.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/shuffle.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_stdio.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/pair.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_u_short.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_polymorphic.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/mismatch.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/to_underlying.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/remove_pointer.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/fill_n.h:
+
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/compare_weak_order_fallback.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__split_buffer:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/distance.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/equal.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_const.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/malloc/_malloc.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/lazy.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_ssize_t.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/mergeable.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/weak_order.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/year_month_day.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/year_month.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/move_sentinel.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/cassert:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_errno_t.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_unsigned.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_partition_copy.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/access.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_reverse_copy.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/arithmetic.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/cstring:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/stable_partition.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/advance.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_inplace_merge.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/types.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__ranges/view_interface.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__random/mersenne_twister_engine.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__ranges/enable_view.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_dev_t.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/auto_cast.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_partition_point.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/operations.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/prev.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/iterator.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/bind_back.h:
 
@@ -4779,41 +4898,57 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/compare_three_way_result.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/types.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/add_const.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_replace_copy.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint8_t.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/reverse_iterator.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/unwrap_ref.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/synth_three_way.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/ordering.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uintmax_t.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_nothrow_assignable.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/common_comparison_category.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/allocator_traits.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/limits:
+
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/same_as.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_u_int16_t.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_move_assignable.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_ssize_t.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/lazy.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_int32_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_mode_t.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/month.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/conjunction.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/malloc/_malloc.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_null.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/declval.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/move.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/xlocale/_wchar.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_wchar_t.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_for_each.h:
 
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/declval.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/libkern/arm/OSByteOrder.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/find_first_of.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/copyable.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/cstddef:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_empty.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/iterator_traits.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/libkern/_OSByteOrder.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__random/default_random_engine.h:
 
@@ -4829,241 +4964,25 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_uid_t.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__bit/bit_cast.h:
+/Users/cthye/cse167-final/src/global.hpp:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/different_from.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/sift_down.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_unbounded_array.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/atomic:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_ucontext.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/xlocale/_stdio.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/integral_constant.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/strong_order.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_lower_bound.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/AvailabilityInternal.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_sigaltstack.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/xlocale/_ctype.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_locale.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/regular.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/endian.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/sort.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/mach/machine/_structs.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_referenceable.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/remove_all_extents.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/has_virtual_destructor.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_pid_t.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/partition.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdlib.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/typeinfo:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/stdlib.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/swap_ranges.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/is_heap.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_class.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/year_month.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/year_month_day.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/promote.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/cmath:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_wctype.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_types.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/copy_n.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/exception:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/convertible_to.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/bind.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/pointer_traits.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/monthday.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/transform.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/streambuf:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/math.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/time.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/partial_order.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/compare_partial_order_fallback.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/ordering.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/chrono:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_unsigned.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/merge.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_trivially_default_constructible.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_partition_copy.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/access.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/limits.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_rsize_t.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_stable_partition.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_mach_port_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_off_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uintmax_t.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_nothrow_assignable.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/common_comparison_category.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_mutexattr_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_cond_t.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_remove_copy.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/cstring:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/arithmetic.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__filesystem/perm_options.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/reference_wrapper.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/pthread/sched.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/boolean_testable.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_ctype.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/auto_ptr.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/__wctype.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_const.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_minmax.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_set_union.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/is_eq.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/move_sentinel.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/compare_strong_order_fallback.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__fwd/string_view.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/steady_clock.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_ctermid.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/pair.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_u_short.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/mismatch.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/to_underlying.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_polymorphic.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/remove_pointer.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/fill_n.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/shuffle.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_stdio.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__filesystem/recursive_directory_iterator.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__random/uniform_int_distribution.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/lib/clang/15.0.2/include/limits.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/invocable.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_sigset_t.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/pointer_to_binary_function.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/lib/clang/15.0.2/include/stdarg.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/move.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/xlocale/_wchar.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_wchar_t.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_trivially_copy_constructible.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/ctype.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_id_t.h:
-
-/Users/cthye/cse167-final/src/Intersection.hpp:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/wchar.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_mbstate_t.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_partial_sort.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/class_or_enum.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__mbstate_t.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/mergeable.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/weak_order.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/file_clock.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_mutex_t.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/cassert:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_errno_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/errno.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_count_if.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/default_searcher.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/invoke.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/convert_to_timespec.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_is_permutation.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/lib/clang/15.0.2/include/stdint.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_timespec.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/_mcontext.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__random/is_seed_sequence.h:
 
@@ -5077,17 +4996,75 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_time_t.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/conjunction.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/_mcontext.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_null.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_referenceable.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_pointer.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/signal.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/remove_all_extents.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/has_virtual_destructor.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_pid_t.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_base_of.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/iosfwd:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/wait.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/AvailabilityVersions.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/copy_cvref.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/max.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__thread/timed_backoff_policy.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_pointer.h:
 
 /Users/cthye/cse167-final/src/Vector.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/alloca.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/Availability.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/ratio:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/ranges_uninitialized_algorithms.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/partition.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdlib.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/typeinfo:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/stdlib.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/iter_swap.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/none_of.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/istream_iterator.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_rwlock_t.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/cstdlib:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_symbol_aliasing.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/nat.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/next.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/unwrap_range.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_remove.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_default_constructible.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/relation.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_callable.h:
 
@@ -5095,59 +5072,65 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/binder2nd.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_class.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__random/uniform_real_distribution.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/semiregular.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_lower_bound.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/endian.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_sigaltstack.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/sort.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/AvailabilityInternal.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/mach/machine/_structs.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/ctype.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_locale.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/lower_bound.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/regular.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/arch.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_rune_t.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_nlink_t.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdint.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_stable_sort.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/predicate.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/mem_fun_ref.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__filesystem/file_status.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/system_clock.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/weak_result_type.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/assume_aligned.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_trivially_destructible.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__random/generate_canonical.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__random/weibull_distribution.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/ctime:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/add_volatile.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/swap.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/exchange.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_va_list.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/stdio.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/cstdio:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/swappable.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/shift_right.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/partial_sort_copy.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/limits.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/destructible.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/limits.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_search_n.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/allocation_guard.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__config:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/comp.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/types.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/ranges_uninitialized_algorithms.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_aggregate.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/ratio:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/common_with.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__config_site:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_push_heap.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_trivially_move_assignable.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/assignable.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/lib/clang/15.0.2/include/stddef.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__config_site:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_intmax_t.h:
 
@@ -5159,21 +5142,21 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/_types.h:
 
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_is_heap.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/set_symmetric_difference.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/copy_cv.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/rel_ops.h:
+
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__ranges/access.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/unordered_map:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/_types.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_generate_n.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint16_t.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/calendar.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_iterator_concept.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/xlocale/_stdlib.h:
 
@@ -5181,33 +5164,27 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_int64_t.h:
 
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/pointer_to_binary_function.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/lib/clang/15.0.2/include/stdarg.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_sigset_t.h:
+
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__numeric/adjacent_difference.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/conditional.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/common_reference_with.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_trivially_move_assignable.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_push_heap.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_u_int32_t.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/copy_cv.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/set_symmetric_difference.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint64_t.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__tuple:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_is_heap.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint64_t.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/rel_ops.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/lower_bound.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/signal.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/errno.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/arm/arch.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__filesystem/filesystem_error.h:
 
@@ -5217,17 +5194,11 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/stdint.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/projected.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__undef_macros:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_find_if_not.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/in_found_result.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/cstdint:
-
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__ranges/subrange.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_ucontext.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_unbounded_array.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_convertible.h:
 
@@ -5245,13 +5216,13 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/make_unsigned.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_blksize_t.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/common_reference.h:
-
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__threading_support:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_pod.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_blksize_t.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/common_reference.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_trivially_move_constructible.h:
 
@@ -5261,19 +5232,25 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/cdefs.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/assignable.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__errc:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__thread/poll_with_backoff.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/min_element.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/underlying_type.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/equality_comparable.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__numeric/inclusive_scan.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/uninitialized_algorithms.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_trivially_copyable.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_move_backward.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/sortable.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_trivially_constructible.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_condattr_t.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/compare_three_way.h:
 
@@ -5291,6 +5268,10 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/stddef.h:
 
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_unsigned_integer.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_standard_layout.h:
+
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_nothrow_move_assignable.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/replace_copy.h:
@@ -5298,6 +5279,18 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__filesystem/perms.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_nothrow_copy_constructible.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/cstdio:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/shift_right.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/machine/limits.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/transform.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/bind.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/pointer_traits.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__filesystem/directory_iterator.h:
 
@@ -5315,9 +5308,25 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/xlocale.h:
 
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/copyable.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/find_first_of.h:
+
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__numeric/exclusive_scan.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_member_pointer.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_partial_sort.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/class_or_enum.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/version:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/raw_storage_iterator.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_upper_bound.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__debug:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/xlocale/_string.h:
 
@@ -5325,25 +5334,17 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_enum.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/iter_swap.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/remove_extent.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/relation.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_remove.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_default_constructible.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/allocator.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_signed_integer.h:
-
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/cwchar:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/three_way_comparable.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_union.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/cstddef:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/iterator_traits.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_empty.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_ct_rune_t.h:
 
@@ -5353,37 +5354,39 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_object.h:
 
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/duration.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/vector:
+
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__ranges/size.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__random/is_valid.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_arithmetic.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/forward.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__random/independent_bits_engine.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/in_in_result.h:
-
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_none_of.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_abstract.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/generate.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/decay.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/concepts.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/in_in_result.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__random/independent_bits_engine.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/clamp.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_copy_assignable.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/iosfwd:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/movable.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_base_of.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/libkern/_OSByteOrder.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/has_unique_object_representation.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/concepts.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/generate.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/decay.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/replace_copy_if.h:
 
@@ -5393,27 +5396,27 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__random/binomial_distribution.h:
 
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/allocator_arg_t.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/enable_if.h:
+
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/type_list.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_pthread/_pthread_key_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_wctype_t.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_literal_type.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/exchange.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_shuffle.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__random/weibull_distribution.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/add_rvalue_reference.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/add_volatile.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/front_insert_iterator.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_nothrow_move_constructible.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_valid_expansion.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_constant_evaluated.h:
 
 /Users/cthye/cse167-final/src/BVH.hpp:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_valid_expansion.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_nothrow_move_constructible.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/numeric:
 
@@ -5431,25 +5434,13 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_compound.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/rank.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_size_t.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__bsd_locale_defaults.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/strings.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_reference.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/forward.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_trivially_assignable.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__numeric/transform_exclusive_scan.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_trivially_copy_assignable.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/includes.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_fundamental.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/AvailabilityVersions.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/add_pointer.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/constructible.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/uses_allocator.h:
 
@@ -5457,27 +5448,71 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_posix_availability.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/new:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/syslimits.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/min_element.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_trivially_copy_assignable.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__errc:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__ranges/concepts.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_volatile.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/incrementable_traits.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__bsd_locale_defaults.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/remove_extent.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/iter_swap.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_reference.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_fd_setsize.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/remove_reference.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/add_pointer.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/common_type.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/remove_const.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/raw_storage_iterator.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/version:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_min.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/lib/clang/15.0.2/include/__stddef_max_align_t.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/equality_comparable.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/remove_const.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/underlying_type.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/cmp.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_nth_element.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/add_cv.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_remove_copy_if.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_member_function_pointer.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__random/log2.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_assignable.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__utility/transaction.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/includes.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_fundamental.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_sample.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/void_t.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/ranges_operations.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/readable_traits.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/type_traits:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_fd_copy.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/remove_volatile.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__random/extreme_value_distribution.h:
 
@@ -5485,90 +5520,50 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_function.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_fd_copy.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_signed_integer.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/remove_volatile.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_find_if_not.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__ranges/data.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/in_found_result.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/aligned_storage.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/cstdint:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/qos.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__undef_macros:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/copy_backward.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/projected.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/predicate.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_rune_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdint.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_trivially_destructible.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/xlocale/_stdio.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/strong_order.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/integral_constant.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/syslimits.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_remove_copy_if.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_member_function_pointer.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_nth_element.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/add_cv.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/type_identity.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint32_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_u_int64_t.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__ranges/concepts.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__iterator/incrementable_traits.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_volatile.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_sample.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/void_t.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/type_traits:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/tuple:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_wint_t.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_wctype_t.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/remove_cv.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__verbose_abort:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_search_n.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_u_int64_t.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__config:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/type_identity.h:
 
-/Users/cthye/cse167-final/src/global.hpp:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint32_t.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/sift_down.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__ranges/data.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/atomic:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__memory/addressof.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/limits:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/totally_ordered.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/vector:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/aligned_storage.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__chrono/duration.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/rank.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_trivially_assignable.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__random/piecewise_constant_distribution.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_bounded_array.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/wait.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/equal_range.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__random/log2.h:
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/unwrap_iter.h:
 
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_assignable.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/_types.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/remove.h:
