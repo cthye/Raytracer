@@ -11,36 +11,6 @@
 #include <cassert>
 #include <array>
 
-bool rayTriangleIntersect(const Vector3f& v0, const Vector3f& v1,
-                          const Vector3f& v2, const Vector3f& orig,
-                          const Vector3f& dir, float& tnear, float& u, float& v)
-{
-    Vector3f edge1 = v1 - v0;
-    Vector3f edge2 = v2 - v0;
-    Vector3f pvec = crossProduct(dir, edge2);
-    float det = dotProduct(edge1, pvec);
-    if (det == 0 || det < 0)
-        return false;
-
-    Vector3f tvec = orig - v0;
-    u = dotProduct(tvec, pvec);
-    if (u < 0 || u > det)
-        return false;
-
-    Vector3f qvec = crossProduct(tvec, edge1);
-    v = dotProduct(dir, qvec);
-    if (v < 0 || u + v > det)
-        return false;
-
-    float invDet = 1 / det;
-
-    tnear = dotProduct(edge2, qvec) * invDet;
-    u *= invDet;
-    v *= invDet;
-
-    return true;
-}
-
 class Triangle : public Object
 {
 public:
@@ -71,9 +41,6 @@ public:
         area = crossProduct(e1, e2).norm()*0.5f;
     }
 
-    bool intersect(const Ray& ray) override;
-    bool intersect(const Ray& ray, float& tnear,
-                   uint32_t& index) const override;
     Intersection getIntersection(Ray ray) override;
     Vector3f evalDiffuseColor(const Vector2f&) const override;
     Bounds3 getBounds() override;
@@ -245,29 +212,6 @@ public:
         bvh = new BVHAccel(ptrs);
     }
 
-
-    bool intersect(const Ray& ray) { return true; }
-
-    bool intersect(const Ray& ray, float& tnear, uint32_t& index) const
-    {
-        bool intersect = false;
-        for (uint32_t k = 0; k < numTriangles; ++k) {
-            const Vector3f& v0 = vertices[vertexIndex[k * 3]];
-            const Vector3f& v1 = vertices[vertexIndex[k * 3 + 1]];
-            const Vector3f& v2 = vertices[vertexIndex[k * 3 + 2]];
-            float t, u, v;
-            if (rayTriangleIntersect(v0, v1, v2, ray.origin, ray.direction, t,
-                                     u, v) &&
-                t < tnear) {
-                tnear = t;
-                index = k;
-                intersect |= true;
-            }
-        }
-
-        return intersect;
-    }
-
     Bounds3 getBounds() { return bounding_box; }
 
     Vector3f evalDiffuseColor(const Vector2f& st) const
@@ -321,13 +265,6 @@ public:
 
     std::string name; // used for debug
 };
-
-inline bool Triangle::intersect(const Ray& ray) { return true; }
-inline bool Triangle::intersect(const Ray& ray, float& tnear,
-                                uint32_t& index) const
-{
-    return false;
-}
 
 inline Bounds3 Triangle::getBounds() { return Union(Bounds3(v0, v1), v2); }
 

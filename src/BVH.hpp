@@ -1,7 +1,3 @@
-//
-// Created by LEI XU on 5/16/19.
-//
-
 #ifndef RAYTRACING_BVH_H
 #define RAYTRACING_BVH_H
 #include <vector>
@@ -35,18 +31,16 @@ public:
     // BVHAccel Public Methods
     BVHAccel(std::vector<std::shared_ptr<Object>> p);
     ~BVHAccel();
-
     Intersection Intersect(const Ray &ray) const;
-    Intersection getIntersection(std::shared_ptr<BVHBuildNode> node, const Ray& ray)const;
-    //intersect with primitive
-    bool IntersectP(const Ray &ray) const;
-    std::shared_ptr<BVHBuildNode> root;
-    std::shared_ptr<BVHBuildNode> recursiveBuild(std::vector<std::shared_ptr<Object>>);
-
-    void getSample(std::shared_ptr<BVHBuildNode> node, float p, Intersection &pos, float &pdf);
     void Sample(Intersection &pos, float &pdf);
 
+private:
+    Intersection getIntersection(std::shared_ptr<BVHBuildNode> node, const Ray& ray)const;
+    std::shared_ptr<BVHBuildNode> recursiveBuild(std::vector<std::shared_ptr<Object>>);
+    void getSample(std::shared_ptr<BVHBuildNode> node, float p, Intersection &pos, float &pdf);
+    
     std::vector<std::shared_ptr<Object>> primitives;
+    std::shared_ptr<BVHBuildNode> root;
 };
 
 

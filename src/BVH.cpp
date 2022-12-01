@@ -60,19 +60,8 @@ Intersection BVHAccel::getIntersection(std::shared_ptr<BVHBuildNode> node,
                                        const Ray& ray) const {
     //* Traverse the BVH to find intersection
     Intersection isect;
-    std::array<int, 3> isDirNeg;
-    isDirNeg.fill(0);
-    if (ray.direction.x > 0) {
-        isDirNeg[0] = 1;
-    }
-    if (ray.direction.y > 0) {
-        isDirNeg[1] = 1;
-    }
-    if (ray.direction.z > 0) {
-        isDirNeg[2] = 1;
-    }
 
-    if (!node->bounds.IntersectP(ray, ray.direction_inv, isDirNeg))
+    if (!node->bounds.IntersectP(ray))
         return isect;
 
     if (node->left == nullptr && node->right == nullptr) {

@@ -1,7 +1,3 @@
-//
-// Created by LEI XU on 5/16/19.
-//
-
 #ifndef RAYTRACING_BOUNDS3_H
 #define RAYTRACING_BOUNDS3_H
 #include "Ray.hpp"
@@ -15,8 +11,8 @@ class Bounds3
     Vector3f pMin, pMax; // two points to specify the bounding box
     Bounds3()
     {
-        double minNum = std::numeric_limits<double>::lowest();
-        double maxNum = std::numeric_limits<double>::max();
+        float minNum = std::numeric_limits<float>::min();
+        float maxNum = std::numeric_limits<float>::max();
         pMax = Vector3f(minNum, minNum, minNum);
         pMin = Vector3f(maxNum, maxNum, maxNum);
     }
@@ -28,6 +24,7 @@ class Bounds3
     }
 
     Vector3f Diagonal() const { return pMax - pMin; }
+    
     int maxExtent() const
     {
         Vector3f d = Diagonal();
@@ -46,6 +43,7 @@ class Bounds3
     }
 
     Vector3f Centroid() { return 0.5 * pMin + 0.5 * pMax; }
+
     Bounds3 Intersect(const Bounds3& b)
     {
         return Bounds3(Vector3f(fmax(pMin.x, b.pMin.x), fmax(pMin.y, b.pMin.y),
@@ -54,104 +52,33 @@ class Bounds3
                                 fmin(pMax.z, b.pMax.z)));
     }
 
-    Vector3f Offset(const Vector3f& p) const
-    {
-        Vector3f o = p - pMin;
-        if (pMax.x > pMin.x)
-            o.x /= pMax.x - pMin.x;
-        if (pMax.y > pMin.y)
-            o.y /= pMax.y - pMin.y;
-        if (pMax.z > pMin.z)
-            o.z /= pMax.z - pMin.z;
-        return o;
-    }
-
-    bool Overlaps(const Bounds3& b1, const Bounds3& b2)
-    {
-        bool x = (b1.pMax.x >= b2.pMin.x) && (b1.pMin.x <= b2.pMax.x);
-        bool y = (b1.pMax.y >= b2.pMin.y) && (b1.pMin.y <= b2.pMax.y);
-        bool z = (b1.pMax.z >= b2.pMin.z) && (b1.pMin.z <= b2.pMax.z);
-        return (x && y && z);
-    }
-
     bool Inside(const Vector3f& p, const Bounds3& b)
     {
         return (p.x >= b.pMin.x && p.x <= b.pMax.x && p.y >= b.pMin.y &&
                 p.y <= b.pMax.y && p.z >= b.pMin.z && p.z <= b.pMax.z);
     }
-    inline const Vector3f& operator[](int i) const
-    {
-        return (i == 0) ? pMin : pMax;
-    }
 
-    inline bool IntersectP(const Ray& ray, const Vector3f& invDir,
-                           const std::array<int, 3>& dirisNeg) const;
+    inline bool IntersectP(const Ray& ray) const;
 };
 
-inline float max(float a, float b, float c) {
-    if (a > b && a > c) {
-        return a;
-    } else if (b > c) {
-        return b;
-    } 
-    return c;
-}
-
-inline float min(float a, float b, float c) {
-    if (a < b && a < c) {
-        return a;
-    } else if (b < c) {
-        return b;
-    } 
-    return c;
-}
-
-inline bool Bounds3::IntersectP(const Ray& ray, const Vector3f& invDir,
-                                const std::array<int, 3>& dirIsNeg) const
+//* check wether the ray hit the bounding box
+inline bool Bounds3::IntersectP(const Ray& ray) const
 {
-    // invDir: ray direction(x,y,z), invDir=(1.0/x,1.0/y,1.0/z), use this because Multiply is faster that Division
-    // dirIsNeg: ray direction(x,y,z), dirIsNeg=[int(x>0),int(y>0),int(z>0)], use this to simplify your logic
-    // TODO test if ray bound intersects
-    float tMinX, tMaxX, tMinY, tMaxY, tMinZ, tMaxZ;
-
-    Vector3f t1 = (this->pMin - ray.origin) * invDir;
-    Vector3f t2 = (this->pMax - ray.origin) * invDir;
-
-    if (dirIsNeg[0]) {
-        //* ray.x 分量指向正向，取pMin.x - origin.x
-        tMinX = t1.x;
-        tMaxX = t2.x;
-    } else {
-        //* 取origin.x - pMax.x
-        tMinX= t2.x;
-        tMaxX = t1.x;
+    float tEnter = std::numeric_limits<float>::min();
+    float tExit = std::numeric_limits<float>::max();
+    Vector3f invDir = ray.direction_inv;
+    for(int i = 0; i < 3; i++) {
+        auto t0 = (this->pMin[i] - ray.origin[i]) * invDir[i];
+        auto t1 = (this->pMax[i] - ray.origin[i]) * invDir[i];
+        if(invDir[i] < 0.0f) 
+            std::swap(t0, t1);
+        tEnter = fmax(tEnter, t0);
+        tExit = fmin(tExit, t1);
+        if(tExit < tEnter) return false;
     }
-
-    if (dirIsNeg[1]) {
-        //* ray.y 分量指向正向，取pMin.y - origin.y
-        tMinY = t1.y;
-        tMaxY = t2.y;
-    } else {
-        //* 取origin.y - pMax.y
-        tMinY = t2.y;
-        tMaxY = t1.y;
-    }
-
-    if (dirIsNeg[2]) {
-        //* ray.z 分量指向正向，取pMin.z - origin.z
-        tMinZ = t1.z;
-        tMaxZ = t2.z;
-    } else {
-        //* 取origin.z - pMax.z
-        tMinZ = t2.z;
-        tMaxZ = t1.z;
-    }
-
-    float tEnter = max(tMinX, tMinY, tMinZ);
-    float tExit = min(tMaxX, tMaxY, tMaxZ);
-
+    
     //* tEnter == tExit的时候，也算是hit,比如obj没有厚度的时候?
-    return tExit >= 0 && tEnter <= tExit;
+    return tExit >= 0;
 }
 
 inline Bounds3 Union(const Bounds3& b1, const Bounds3& b2)
@@ -159,14 +86,6 @@ inline Bounds3 Union(const Bounds3& b1, const Bounds3& b2)
     Bounds3 ret;
     ret.pMin = Vector3f::Min(b1.pMin, b2.pMin);
     ret.pMax = Vector3f::Max(b1.pMax, b2.pMax);
-    return ret;
-}
-
-inline Bounds3 Union(const Bounds3& b, const Vector3f& p)
-{
-    Bounds3 ret;
-    ret.pMin = Vector3f::Min(b.pMin, p);
-    ret.pMax = Vector3f::Max(b.pMax, p);
     return ret;
 }
 

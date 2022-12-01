@@ -65,7 +65,7 @@ Sample the pixel multiple times and average the result by the end. For each ray 
 Now the ray's target coordinate is:
 $$x = 2 *\frac{i + randomFloat }{2} - 1, y = 1 - \frac{i + randomFloat}{2}$$
 
-### Build Bounding Volume Hierachy
+### Bounding Volume Hierachy
 
 If calculate the intersection for every single object, the time cost will be linear to the number of objects, which is the main time-bottleneck. Therefore, before doing the ray intersection part, build a BVH to speed up the procedure. 
 
@@ -75,11 +75,11 @@ Rather than intersect a ray with privimitive objects, intersect with bounding bo
 
 ![x coordinate](https://raytracing.github.io/images/fig-2.03-ray-slab.jpg)
 
-If only consider x coordinates, let $$t_{min}$$ represents the time when the ray enters the left-side plane $$x = x_0$$ and  $$t_{max}$$ represents the time when the ray exits the right-side plane $$x = x_1$$. For a given ray $$R(t) = A + tb,$$
+If only consider x coordinates, let $t_{min}$ represents the time when the ray enters the left-side plane $x = x_0$ and  $t_{max}$ represents the time when the ray exits the right-side plane $x = x_1$. For a given ray $R(t) = A + tb$
 
 $$t_{min} = \frac{x_0 - A_x}{b_x}, t_{max} = \frac{x_1 - A_x}{b_x}$$
 
-For 3 dimenstions, $$t_{enter} = max(t_{xmin}, t_{ymin}, t_{zmin}). t_{exit} = min(t_{xmax}, t_{ymax}, t_{zmax})$
+For 3 dimenstions, $$t_{enter} = max(t_{xmin}, t_{ymin}, t_{zmin}). t_{exit} = min(t_{xmax}, t_{ymax}, t_{zmax})$$
 
 Notice that both t_min and t_max can be negative, which means that the ray'sorigin is inside of the box or the ray does not enter the box. Therefore, if a ray hits the box, it needs to satisfy $$t_{enter} <= t_{exit}$$ and $$t_{exit} >= 0$$
 
@@ -87,11 +87,11 @@ Notice that both t_min and t_max can be negative, which means that the ray'sorig
 
 Two vectors (points) can specify a bounding box, a point pMin which represents the lower left corner and the other pMax represents the upper right corner. For each primitives, it has its own method to calculate the bouding box. For example, the bounding box of sphere is represented by 
 
-$$pMin = center - (r, r, r), pMax = center + (r, r, r)$$. 
+$$pMin = center - (r, r, r), pMax = center + (r, r, r)$$
 
 And for a triangle, 
 
-$$pMin = min(x_1, x_2, x_3), min(y_1, y_2, y_3), min(z_1, z_2, z_3), pMin = max(x_1, x_2, x_3), max(y_1, y_2, y_3), max(z_1, z_2, z_3)$$. 
+$$pMin = min(x_1, x_2, x_3), min(y_1, y_2, y_3), min(z_1, z_2, z_3), pMin = max(x_1, x_2, x_3), max(y_1, y_2, y_3), max(z_1, z_2, z_3)$$
 
 Creating a bounding box from 2 boxes by union is just update the pMin and pMax: 
 
@@ -103,7 +103,45 @@ The main idea of constructing BVH is building a tree whose nodes contain the bou
 
 #### Intersect with BHV
 
+Getting the intersection with BHV is also a similar recursive functions: first check wether the ray hit the parent node, if yes, recursivily check with the left and right children nodes. If this node is a leaf node, intersect the ray with the primitive object inside this node. Each object implements its ```getintersection``` method
 
+Intersection with sphere is the same as wriiten in slide (solveQuadratic). Intersection with triangle using the Moller Trumbore Intersection algorithm. This algorithm takes the advantage of barycentric coordinates and uses it to represent the intersection coordinate. Reference to this [wikipedia](https://en.wikipedia.org/wiki/M%C3%B6ller%E2%80%93Trumbore_intersection_algorithm#:~:text=The%20M%C3%B6ller%E2%80%93Trumbore%20ray%2Dtriangle,the%20plane%20containing%20the%20triangle.)
+
+if the intersection P is in triangle(A, B, C), then
+$$
+P= O + tD = wA + uB + cV = (1 - u - v) + uB + vC = A + u(B-A) + v(C-A) \\
+\begin{bmatrix}
+-D & (B - A) & (C-A) \\
+\end{bmatrix} 
+\begin{bmatrix}
+t \\
+u \\
+v
+\end{bmatrix} = 
+O - A \\
+\begin{bmatrix}
+-D & (B - A) & (C-A) \\
+\end{bmatrix} = \frac{1}{\vec{S_1}\vec{E_1}}
+\begin{bmatrix}
+\vec{S_2} \vec{E_2} \\
+\vec{S_1} \vec{S} \\
+\vec{S_2} \vec{D} 
+\end{bmatrix} \\
+where \\
+\vec{E_1} = \vec{P_1} - \vec{P_0}\\
+\vec{E_2} = \vec{P_2} - \vec{P_0}\\
+\vec{S} = \vec{O} - \vec{P_0}\\
+\vec{S_1} = \vec{D} - \vec{E_2}\\
+\vec{S_2} = \vec{S} \times \vec{E_1}
+$$
+
+### Intersection
+
+
+
+### Object
+
+### Material
 
 ### Renderer
 
