@@ -788,6 +788,7 @@ CMakeFiles/RayTracing.dir/main.cpp.o: \
   /Users/cthye/cse167-final/src/Material.hpp \
   /Users/cthye/cse167-final/src/Light.hpp \
   /Users/cthye/cse167-final/src/BVH.hpp \
+  /Users/cthye/cse167-final/src/Camera.hpp \
   /Users/cthye/cse167-final/src/Triangle.hpp \
   /Users/cthye/cse167-final/src/OBJ_Loader.hpp \
   /opt/homebrew/Cellar/llvm/15.0.2/bin/../include/c++/v1/fstream \
@@ -809,4 +810,5 @@ CMakeFiles/RayTracing.dir/main.cpp.o: \
   /opt/homebrew/Cellar/llvm/15.0.2/bin/../include/c++/v1/__filesystem/recursive_directory_iterator.h \
   /opt/homebrew/Cellar/llvm/15.0.2/bin/../include/c++/v1/__filesystem/u8path.h \
   /opt/homebrew/Cellar/llvm/15.0.2/bin/../include/c++/v1/cassert \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/assert.h
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/assert.h \
+  /Users/cthye/cse167-final/src/Sphere.hpp

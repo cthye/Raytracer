@@ -1579,6 +1579,7 @@ CMakeFiles/RayTracing.dir/Renderer.cpp.o: /Users/cthye/cse167-final/src/Renderer
   /Users/cthye/cse167-final/src/Material.hpp \
   /Users/cthye/cse167-final/src/Light.hpp \
   /Users/cthye/cse167-final/src/BVH.hpp \
+  /Users/cthye/cse167-final/src/Camera.hpp \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/fstream \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/filesystem \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__filesystem/copy_options.h \
@@ -3910,6 +3911,7 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
   /Users/cthye/cse167-final/src/Material.hpp \
   /Users/cthye/cse167-final/src/Light.hpp \
   /Users/cthye/cse167-final/src/BVH.hpp \
+  /Users/cthye/cse167-final/src/Camera.hpp \
   /Users/cthye/cse167-final/src/Triangle.hpp \
   /Users/cthye/cse167-final/src/OBJ_Loader.hpp \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/fstream \
@@ -3931,8 +3933,11 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__filesystem/recursive_directory_iterator.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__filesystem/u8path.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/cassert \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/assert.h
+  /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/assert.h \
+  /Users/cthye/cse167-final/src/Sphere.hpp
 
+
+/Users/cthye/cse167-final/src/Sphere.hpp:
 
 /Users/cthye/cse167-final/src/OBJ_Loader.hpp:
 
@@ -3954,6 +3959,8 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__filesystem/file_type.h:
 
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__filesystem/file_status.h:
+
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/iterator_operations.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__filesystem/copy_options.h:
@@ -3965,6 +3972,10 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_same.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/fstream:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/types.h:
+
+/Users/cthye/cse167-final/src/Camera.hpp:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_constructible.h:
 
@@ -4898,8 +4909,6 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__compare/compare_three_way_result.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/sys/types.h:
-
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/add_const.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/ranges_replace_copy.h:
@@ -5091,8 +5100,6 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdint.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/predicate.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__filesystem/file_status.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/weak_result_type.h:
 
