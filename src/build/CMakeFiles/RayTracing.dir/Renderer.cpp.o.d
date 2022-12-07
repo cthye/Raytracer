@@ -786,7 +786,6 @@ CMakeFiles/RayTracing.dir/Renderer.cpp.o: \
   /Users/cthye/cse167-final/src/Ray.hpp \
   /Users/cthye/cse167-final/src/Intersection.hpp \
   /Users/cthye/cse167-final/src/Material.hpp \
-  /Users/cthye/cse167-final/src/Light.hpp \
   /Users/cthye/cse167-final/src/BVH.hpp \
   /Users/cthye/cse167-final/src/Camera.hpp \
   /opt/homebrew/Cellar/llvm/15.0.2/bin/../include/c++/v1/fstream \

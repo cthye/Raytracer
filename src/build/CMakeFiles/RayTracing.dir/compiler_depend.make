@@ -1577,7 +1577,6 @@ CMakeFiles/RayTracing.dir/Renderer.cpp.o: /Users/cthye/cse167-final/src/Renderer
   /Users/cthye/cse167-final/src/Ray.hpp \
   /Users/cthye/cse167-final/src/Intersection.hpp \
   /Users/cthye/cse167-final/src/Material.hpp \
-  /Users/cthye/cse167-final/src/Light.hpp \
   /Users/cthye/cse167-final/src/BVH.hpp \
   /Users/cthye/cse167-final/src/Camera.hpp \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/fstream \
@@ -2387,7 +2386,6 @@ CMakeFiles/RayTracing.dir/Scene.cpp.o: /Users/cthye/cse167-final/src/Scene.cpp \
   /Users/cthye/cse167-final/src/Ray.hpp \
   /Users/cthye/cse167-final/src/Intersection.hpp \
   /Users/cthye/cse167-final/src/Material.hpp \
-  /Users/cthye/cse167-final/src/Light.hpp \
   /Users/cthye/cse167-final/src/BVH.hpp
 
 CMakeFiles/RayTracing.dir/Vector.cpp.o: /Users/cthye/cse167-final/src/Vector.cpp \
@@ -3909,7 +3907,6 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
   /Users/cthye/cse167-final/src/Ray.hpp \
   /Users/cthye/cse167-final/src/Intersection.hpp \
   /Users/cthye/cse167-final/src/Material.hpp \
-  /Users/cthye/cse167-final/src/Light.hpp \
   /Users/cthye/cse167-final/src/BVH.hpp \
   /Users/cthye/cse167-final/src/Camera.hpp \
   /Users/cthye/cse167-final/src/Triangle.hpp \
@@ -3958,8 +3955,6 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/iomanip:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__filesystem/file_type.h:
-
-/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__filesystem/file_status.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__algorithm/iterator_operations.h:
 
@@ -4244,8 +4239,6 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/pthread/qos.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/bit:
-
-/Users/cthye/cse167-final/src/Light.hpp:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__type_traits/is_integral.h:
 
@@ -5100,6 +5093,8 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
 /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/stdint.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__concepts/predicate.h:
+
+/opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__filesystem/file_status.h:
 
 /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__functional/weak_result_type.h:
 
