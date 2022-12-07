@@ -1,7 +1,3 @@
-//
-// Created by goksu on 2/25/20.
-//
-
 #include "Renderer.hpp"
 
 #include <fstream>
@@ -13,19 +9,8 @@
 const float EPSILON = 0.00001;
 std::mutex lock;
 
-// The main render function. This where we iterate over all pixels in the image,
-// generate primary rays and cast these rays into the scene. The content of the
-// framebuffer is saved to a file.
-void Renderer::Render(const Scene& scene) {
+void Renderer::Render(const Scene& scene, const Camera& cam) {
     framebuffer = new std::vector<Vector3f>(scene.width * scene.height);
-    // std::vector<Vector3f> framebuffer(scene.width * scene.height);
-
-    // float scale = tan(deg2rad(scene.fov * 0.5));
-    // float imageAspectRatio = scene.width / (float)scene.height;
-    // Vector3f eye_pos(278, 273, -800);
-
-    // change the spp (samples per pixel) value to change sample amount
-    // int spp = 16;
     std::cout << "SPP: " << spp << "\n";
 
     //* threads
@@ -39,7 +24,7 @@ void Renderer::Render(const Scene& scene) {
     // }
     #pragma omp parallel for
         for (int i = 0; i < THREAD_NUMBER; i++) {
-            Renderer::MultiThreadRender(i, std::ref(scene));
+            Renderer::MultiThreadRender(i, std::ref(scene), std::ref(cam));
         }
     UpdateProgress(1.f);
 
@@ -63,35 +48,25 @@ void Renderer::Render(const Scene& scene) {
     fclose(fp);
 }
 
-void Renderer::MultiThreadRender(int tid, const Scene& scene) {
+void Renderer::MultiThreadRender(int tid, const Scene& scene, const Camera& cam) {
     for (uint32_t j = 0; j < scene.height; ++j) {
         for (uint32_t i = 0; i < scene.width; ++i) {
             int m = j * scene.height + i;
             if (m % THREAD_NUMBER == tid) {
                 // generate primary ray direction
-                // std::cout << "thread" << tid << "is at the " << m << std::endl;
-               
+                // std::cout << "thread" << tid << "is at the " << m << std::endl;  
                 // std::cout << "thread" << tid << "'s dir" << dir  << std::endl;
-                int width, height;
-                float step = 1. / width;
-                // width = height = sqrt(spp);
                 //MSAA抗锯齿
+                //todo: get random float可能会有点慢...用spp % width可能好一点（前提是width=height，spp可开根）
                 for (int k = 0; k < spp; k++) {
-                    // float x = (2 * (i + step / 2 + step * (k % width)) / (float)scene.width - 1) *
-                    //       scene.imageAspectRatio * scene.scale;
-                    // float y = (1 - 2 * (j + step / 2 + step * (k / height)) / (float)scene.height) * scene.scale;
-                    float x = (2 * (i + get_random_float()) / (float)scene.width - 1) *
-                          scene.imageAspectRatio * scene.scale;
-                    float y = (1 - 2 * (j + get_random_float()) / (float)scene.height) * scene.scale;
-                    //? 为什么不用减去eye_pos?
-                    Vector3f dir = normalize(Vector3f(-x, y, 1));
+                    float x = 2 * (i + get_random_float()) / (float)scene.width - 1;
+                    float y = 1 - 2 * (j + get_random_float()) / (float)scene.height;
 
-                    // float x = 2 * (i + 0.5 + get_random_float()) / (float)scene.width - 1;
-                    // float y = 1 - 2 * (j + 0.5 + get_random_float()) / (float)scene.height;
-                    // Vector3f dir  = normalize(scene.lower_left_corner + x*scene.horizontal + y*scene.vertical - scene.eye_pos);
+                    //为什么不用减去eye_pos，因为以eye_pos作为原点啊
+                    Vector3f dir  = normalize(x * cam.horizontal + y * cam.vertical - cam.w);
                     // std::cout << dir << std::endl;
                     (*framebuffer)[m] +=
-                        scene.castRay(Ray(scene.eye_pos, dir), 0);
+                        scene.castRay(Ray(cam.eye_pos, dir));
                 }
                 (*framebuffer)[m] = (*framebuffer)[m] / spp;
                 lock.lock();

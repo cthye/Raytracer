@@ -12,10 +12,10 @@ class Sphere : public Object{
 public:
     Vector3f center;
     float radius, radius2;
-    Material *m;
+    std::shared_ptr<Material> m;
     float area;
     std::string name;
-    Sphere(const Vector3f &c, const float &r, Material* mt = new Material()) : center(c), radius(r), radius2(r * r), m(mt), area(4 * M_PI *r *r) {}
+    Sphere(const Vector3f &c, const float &r, std::shared_ptr<Material> mt) : center(c), radius(r), radius2(r * r), m(mt), area(4 * M_PI *r *r) {}
     Intersection getIntersection(Ray ray){
         Intersection result;
         result.happened = false;
@@ -28,11 +28,9 @@ public:
         if (t0 < 0) t0 = t1;
         if (t0 < 0) return result;
         result.happened=true;
-
         result.coords = Vector3f(ray.origin + ray.direction * t0);
         result.normal = normalize(Vector3f(result.coords - center));
         result.m = this->m;
-        result.obj = this;
         result.distance = t0;
         return result;
 

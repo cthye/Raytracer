@@ -24,12 +24,34 @@ public:
     }
 };
 
+struct SAHBox {
+    Bounds3 bounds;
+    int primitiveCount;
+    std::vector<std::shared_ptr<Object> > objs;
+
+public:
+    SAHBox() {
+        bounds = Bounds3();
+        primitiveCount = 0;
+    }
+    void joinPrimitive(std::shared_ptr<Object> obj) {
+        bounds = Union(bounds, obj->getBounds());
+        primitiveCount++;
+        objs.push_back(obj);
+    }
+};
+
+inline float computeSAH(std::shared_ptr<SAHBox> box1, std::shared_ptr<SAHBox> box2) {
+    return box1->bounds.SurfaceArea()*box1->primitiveCount + box2->bounds.SurfaceArea()*box2->primitiveCount; 
+}
 
 class BVHAccel {
 
 public:
     // BVHAccel Public Methods
-    BVHAccel(std::vector<std::shared_ptr<Object>> p);
+    enum class SplitMethod { NAIVE, SAH };
+
+    BVHAccel(std::vector<std::shared_ptr<Object>> p, SplitMethod splitMethod = SplitMethod::NAIVE);
     ~BVHAccel();
     Intersection Intersect(const Ray &ray) const;
     void Sample(Intersection &pos, float &pdf);
@@ -38,11 +60,13 @@ private:
     Intersection getIntersection(std::shared_ptr<BVHBuildNode> node, const Ray& ray)const;
     std::shared_ptr<BVHBuildNode> recursiveBuild(std::vector<std::shared_ptr<Object>>);
     void getSample(std::shared_ptr<BVHBuildNode> node, float p, Intersection &pos, float &pdf);
-    
+    void NAIVE(std::vector<std::shared_ptr<Object> > objects, std::shared_ptr<BVHBuildNode> node, int dim);
+    void SAH(std::vector<std::shared_ptr<Object> > objects, Bounds3 centroidBounds, std::shared_ptr<BVHBuildNode> node, int dim);
+
     std::vector<std::shared_ptr<Object>> primitives;
     std::shared_ptr<BVHBuildNode> root;
+    SplitMethod splitMethod;
 };
-
 
 
 #endif //RAYTRACING_BVH_H

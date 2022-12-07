@@ -19,11 +19,11 @@ public:
     Vector3f t0, t1, t2; // texture coords
     Vector3f normal;
     float area;
-    Material* m;
+    std::shared_ptr<Material> m;
 
     std::string name; // used for debug
 
-    Triangle(Vector3f _v0, Vector3f _v1, Vector3f _v2, Material* _m = nullptr)
+    Triangle(Vector3f _v0, Vector3f _v1, Vector3f _v2, std::shared_ptr<Material> _m = nullptr)
         : v0(_v0), v1(_v1), v2(_v2), m(_m)
     {
         e1 = v1 - v0;
@@ -32,7 +32,7 @@ public:
         area = crossProduct(e1, e2).norm()*0.5f;
     }
 
-    Triangle(Vector3f _v0, Vector3f _v1, Vector3f _v2, std::string _name, Material* _m = nullptr)
+    Triangle(Vector3f _v0, Vector3f _v1, Vector3f _v2, std::string _name, std::shared_ptr<Material> _m = nullptr)
         : v0(_v0), v1(_v1), v2(_v2), m(_m), name(_name)
     {
         e1 = v1 - v0;
@@ -46,11 +46,10 @@ public:
     Bounds3 getBounds() override;
     void Sample(Intersection &pos, float &pdf) override {
         float x = std::sqrt(get_random_float()), y = get_random_float();
-        //? 我不理解
-        pos.coords = v0 * (1.0f - x) + v1 * (x * (1.0f - y)) + v2 * (x * y);
+        float r = std::sqrt(x);
+        pos.coords = v0 * (1.0f - r) + v1 * (r * (1.0f - y)) + v2 * (r * y);
         pos.normal = this->normal;
         pos.happened = 1;
-        pos.obj = this;
         pdf = 1.0f / area;
     }
     float getArea() override {
@@ -67,7 +66,7 @@ public:
 class MeshTriangle : public Object
 {
 public:
-    MeshTriangle(const std::string& filename, Material *mt = new Material())
+    MeshTriangle(const std::string& filename, std::shared_ptr<Material> mt)
     {
         objl::Loader loader;
         loader.LoadFile(filename);
@@ -113,7 +112,7 @@ public:
         bvh = new BVHAccel(ptrs);
     }
 
-    MeshTriangle(const std::string& filename, std::string _name = nullptr, Material *mt = new Material())
+    MeshTriangle(const std::string& filename, std::string _name, std::shared_ptr<Material> mt)
     {
         objl::Loader loader;
         loader.LoadFile(filename);
@@ -160,7 +159,7 @@ public:
         bvh = new BVHAccel(ptrs);
     }
 
-    MeshTriangle(const std::string& filename, Vector3f tran, Vector3f scale, Vector3f xRotate, Vector3f yRotate, Vector3f zRotate, Material *mt = new Material())
+    MeshTriangle(const std::string& filename, Vector3f tran, Vector3f scale, Vector3f xRotate, Vector3f yRotate, Vector3f zRotate, std::shared_ptr<Material> mt)
     {
         objl::Loader loader;
         loader.LoadFile(filename);
@@ -261,7 +260,7 @@ public:
     BVHAccel* bvh;
     float area;
 
-    Material* m;
+    std::shared_ptr<Material> m;
 
     std::string name; // used for debug
 };
@@ -298,7 +297,6 @@ inline Intersection Triangle::getIntersection(Ray ray)
     inter.distance = t_tmp;
     inter.happened = true;
     inter.normal = this->normal;
-    inter.obj = this;
     inter.m = this->m;
 
     return inter;

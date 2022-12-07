@@ -1,15 +1,15 @@
 #include "Scene.hpp"
 
 void Scene::buildBVH() {
-    printf(" - Generating BVH...\n\n");
-    this->bvh = new BVHAccel(objects); // improve by using SAH
+    // this->bvh = new BVHAccel(objects); 
+    this->bvh = new BVHAccel(objects, BVHAccel::SplitMethod::SAH); // improve by using SAH
 }
 
 Intersection Scene::intersect(const Ray &ray) const {
     return this->bvh->Intersect(ray);
 }
 
-//* pos得到的是被采样的光源坐标，pdf可以理解为1/A
+//* pos得到的是被采样的光源坐标，pdf=1/A
 //* 注意光源也是一个mesh triangles object
 void Scene::sampleLight(Intersection &pos, float &pdf) const {
     float emit_area_sum = 0;
@@ -31,17 +31,11 @@ void Scene::sampleLight(Intersection &pos, float &pdf) const {
     }
 }
 
-// Implementation of Path Tracing
-Vector3f Scene::castRay(const Ray &ray, int depth) const {
-    // TODO Implement Path Tracing Algorithm here
+Vector3f Scene::castRay(const Ray &ray) const {
     Intersection intersection = Scene::intersect(ray);
-    Object *hitObject = intersection.obj;
     Vector3f hitColor = this->backgroundColor;
 
     if (intersection.happened) {
-        if (intersection.obj->getName() == "light") {
-            return Vector3f(1.);
-        }
         hitColor = shader(intersection, -ray.direction);
     }
 
@@ -54,64 +48,38 @@ Vector3f Scene::shader(Intersection intersection, Vector3f wo) const {
 
     Vector3f hitPoint = intersection.coords;
     Vector3f N = intersection.normal;
-    Material *m = intersection.m;
+    std::shared_ptr<Material> m = intersection.m;
 
     //* uniformaly sample the light
-    Intersection xx;
+    Intersection lightPos;
     float pdf;
-    Scene::sampleLight(xx, pdf);
+    Scene::sampleLight(lightPos, pdf);
 
-    Vector3f lightDir = normalize(xx.coords - hitPoint);  // p -> light
-    float dist2Light = Vector3f::secondNorm(xx.coords, hitPoint);
+    Vector3f lightDir = normalize(lightPos.coords - hitPoint);  // p -> light
+    float dist2Light = Vector3f::secondNorm(lightPos.coords, hitPoint);
 
-    Vector3f shadowOrig;
-    
     //* avoid the object shadow itself and pull the shadowPoint forward the light a bit
+    Vector3f shadowOrig;
     shadowOrig = hitPoint - 0.0001 * lightDir;
-    // shadowOrig = hitPoint;
 
     Ray shadowRay(shadowOrig, lightDir); 
     Intersection intersWithLight = bvh->Intersect(shadowRay);
     float dist = Vector3f::secondNorm(intersWithLight.coords, hitPoint);
     
-    // if (!strcmp(intersection.obj->getName(), "tallbox")) {
-    //     std::cout << "===========================hit tall box======================" << std::endl;
-    // }
-
-
-    // bool isNotBlocked = dist >= dist2Light - EPSILON;
-    bool isNotBlocked = sqrt((intersWithLight.coords - xx.coords).norm()) < 0.2; //* 我真的醉了，得设置这么大的epsilon才能去掉横向黑线！
-
-
-    // if (!strcmp(intersection.obj->getName(), "tallbox")) {
-    //     // std::cout << "hit tall box" << std::endl;
-        
-    //     std::cout << "light: " << xx.coords << " hit:" << hitPoint
-    //               << " happended:" << tmp.happened << " inser obj: " << tmp.obj
-    //               << " light obj : " << xx.obj << " light emit:" << xx.emit
-    //               << std::endl;
-
-    //     std::cout << "block: " << isNotBlocked << " coords:" << tmp.coords
-    //               << std::endl;
-    //     // if (tmp.happened)
-    //     //     std::cout << " emit: " << tmp.obj->hasEmit() << std::endl;
-    //     if(!isNotBlocked) {
-    //         std::cout << "blocked it self!" << std::endl;
-    //     }
-    // }
+    // use a small epsilon to avoid floating point precision error
+    bool isNotBlocked = sqrt((intersWithLight.coords - lightPos.coords).norm()) < 0.2;
 
     if (isNotBlocked) {
         Vector3f wi = -lightDir;  // light -> p
         //* assume all directions are pointing outwards
-        L_dir = xx.emit * m->eval(-wi, wo, N) * dotProduct(lightDir, N) *
-                dotProduct(wi, xx.normal) /
-                Vector3f::secondNorm(hitPoint, xx.coords) /
+        L_dir = lightPos.emit * m->eval(-wi, wo, N) * dotProduct(lightDir, N) *
+                dotProduct(wi, lightPos.normal) /
+                Vector3f::secondNorm(hitPoint, lightPos.coords) /
                 std::max(pdf, EPSILON);
     }
 
     if (get_random_float() < RussianRoulette) {
-        //* uniformaly choose a w_i (p->q)
-        Vector3f wo_ = m->sample(wo, N);  // p -> q
+        Vector3f wo_ = m->scatter(N);  // p -> q
         float pdf = m->pdf(wo, wo_, N);
 
         Ray r(hitPoint + EPSILON * wo_, normalize(wo_));

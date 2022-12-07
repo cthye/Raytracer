@@ -2,6 +2,7 @@
 // Created by goksu on 2/25/20.
 //
 #include "Scene.hpp"
+#include "Camera.hpp"
 
 #pragma once
 struct hit_payload
@@ -15,14 +16,13 @@ struct hit_payload
 class Renderer
 {
 public:
-    // Vector3f eye_pos = Vector3f(278., 273., -800.);
     std::vector<Vector3f>* framebuffer;
     int spp = 16;
     // int spp = 512;
     int THREAD_NUMBER = 16;
     int renderedPixels = 0;
 
-    void Render(const Scene& scene);
-    void MultiThreadRender(int tid, const Scene& scene);
+    void Render(const Scene& scene, const Camera& cam);
+    void MultiThreadRender(int tid, const Scene& scene, const Camera& cam);
 private:
 };

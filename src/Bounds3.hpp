@@ -58,6 +58,18 @@ class Bounds3
                 p.y <= b.pMax.y && p.z >= b.pMin.z && p.z <= b.pMax.z);
     }
 
+    Vector3f Offset(const Vector3f& p) const
+    {
+        Vector3f o = p - pMin;
+        if (pMax.x > pMin.x)
+            o.x /= pMax.x - pMin.x;
+        if (pMax.y > pMin.y)
+            o.y /= pMax.y - pMin.y;
+        if (pMax.z > pMin.z)
+            o.z /= pMax.z - pMin.z;
+        return o;
+    }
+
     inline bool IntersectP(const Ray& ray) const;
 };
 
