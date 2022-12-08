@@ -104,8 +104,6 @@ The main idea of constructing BVH is building a tree whose nodes contain the bou
 
 ##### Optimization: SAH based BVH
 
-TODO
-
 A bounding box hierarchy based on the Surface Area Heuristic (SAH) is a way of organizing bounding boxes in a tree-like structure such that the overall cost of searching the tree for a particular object is minimized. The SAH uses the surface area of the bounding boxes to determine how they should be arranged in the hierarchy. Bounding boxes with smaller surface areas are placed closer to the leaves of the tree, while bounding boxes with larger surface areas are placed closer to the root of the tree. This arrangement allows for efficient searching, as the search can be quickly pruned once a bounding box with a small enough surface area is found.
 
 #### Intersect with BHV
@@ -144,11 +142,30 @@ $$ \vec{S_2} = \vec{S} \times \vec{E_1} $$
 
 ### Intersection
 
-Intersection needs to contain the information of the coordinate of the intersected point, the material of the intersected object, the normal of that surface.
+Intersection needs to contain the information
+
+-  the oordinate of the intersected point
+- the material of the intersected object
+- the normal of that surface
+- the distance from the ray origin and the intersection
 
 ### Object
 
+The object class need to define the following functions:
+
+- getIntersection (mentioned above)
+- getBounds (mentioned above)
+- getArea: calculate the area of primitive for surface sampling
+- Sample: randomly choose a point on the surface and return the coordination and pdf of that point
+- hasEmit: return its material emitable or not
+
+For triangle and sphere, these implematations are intuitively. For MeshTriangle object, it would become a bit more complex.
+
+For each meshTriangle, it needs to build up a bvh for triangle pritimives inside it. Therefore, 
+
 ### Material
+
+
 
 ### Shader
 
@@ -284,8 +301,6 @@ Define ```Vector3f``` class for 3D vector operations
 ### Global
 Define some useful global util functions (clamp, deg2Rad, etc..)
 
-...TODO
-
 ## Result
 
 compared between two sample methods
@@ -319,8 +334,6 @@ Replace the ```xx``` with the correct gencode. Check with the [link](https://arn
 ```
 make out.ppm
 ```
-### Result
-todo
 ## Acknowledgement
 The CPU-version ray tracer refers to the tutorial from [ray tracing in one weekend series](https://raytracing.github.io/books) and [GAMES101](https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html) a lots.
 

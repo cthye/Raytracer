@@ -1,18 +1,8 @@
-//
-// Created by goksu on 2/25/20.
-//
+#ifndef RAYTRACING_RENDERER_H
+#define RAYTRACING_RENDERER_H
+
 #include "Scene.hpp"
 #include "Camera.hpp"
-
-#pragma once
-struct hit_payload
-{
-    float tNear;
-    uint32_t index;
-    Vector2f uv;
-    Object* hit_obj;
-};
-
 class Renderer
 {
 public:
@@ -26,3 +16,5 @@ public:
     void MultiThreadRender(int tid, const Scene& scene, const Camera& cam);
 private:
 };
+
+#endif //RAYTRACING_RENDERER_H

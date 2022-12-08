@@ -1,4 +1,3 @@
-#pragma once
 #ifndef RAYTRACING_CAMERA_H
 #define RAYTRACING_CAMERA_H
 

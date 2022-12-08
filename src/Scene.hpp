@@ -1,8 +1,5 @@
-//
-// Created by Göksu Güvendiren on 2019-05-14.
-//
-
-#pragma once
+#ifndef RAYTRACING_SCENE_H
+#define RAYTRACING_SCENE_H
 
 #include <vector>
 #include "Vector.hpp"
@@ -33,3 +30,5 @@ public:
     Vector3f shader(Intersection p, Vector3f wo) const;
     void sampleLight(Intersection &pos, float &pdf) const;
 };
+
+# endif

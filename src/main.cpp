@@ -1,6 +1,7 @@
 #include "Renderer.hpp"
 #include "Scene.hpp"
 #include "Triangle.hpp"
+#include "MeshTriangle.hpp"
 #include "Sphere.hpp"
 #include "Vector.hpp"
 #include "global.hpp"
@@ -36,7 +37,7 @@ int main(int argc, char** argv)
     MeshTriangle floor("../models/cornellbox/floor.obj", "floor", white);
     MeshTriangle shortbox("../models/cornellbox/shortbox.obj", "shortbox", white);
     MeshTriangle tallbox("../models/cornellbox/tallbox.obj", "tallbox", white);
-    MeshTriangle bunny("../models/bunny/bunny.obj", Vector3f(200, -60, 150), Vector3f(1500, 1500, 1500), Vector3f(-1, 0, 0), Vector3f(0, 1, 0), Vector3f(0, 0, -1), pink);
+    // MeshTriangle bunny("../models/bunny/bunny.obj", Vector3f(200, -60, 150), Vector3f(1500, 1500, 1500), Vector3f(-1, 0, 0), Vector3f(0, 1, 0), Vector3f(0, 0, -1), pink);
     MeshTriangle left("../models/cornellbox/left.obj", "left", red);
     MeshTriangle right("../models/cornellbox/right.obj", "right", green);
     MeshTriangle light_("../models/cornellbox/light.obj", "light", light);
@@ -49,7 +50,7 @@ int main(int argc, char** argv)
     scene.Add(std::make_shared<MeshTriangle>(left));
     scene.Add(std::make_shared<MeshTriangle>(right));
     scene.Add(std::make_shared<MeshTriangle>(light_));
-    scene.Add(std::make_shared<MeshTriangle>(bunny));
+    // scene.Add(std::make_shared<MeshTriangle>(bunny));
     // scene.Add(std::make_shared<Sphere>(ball));
 
 

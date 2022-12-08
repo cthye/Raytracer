@@ -1,4 +1,5 @@
-#pragma once
+#ifndef RAYTRACING_GLOBAL_H
+#define RAYTRACING_GLOBAL_H
 #include <iostream>
 #include <cmath>
 #include <random>
@@ -51,3 +52,5 @@ inline void UpdateProgress(float progress)
     std::cout << "] " << int(progress * 100.0) << " %\r";
     std::cout.flush();
 };
+
+# endif

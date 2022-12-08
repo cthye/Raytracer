@@ -1,4 +1,3 @@
-#pragma once
 #ifndef RAYTRACING_RAY_H
 #define RAYTRACING_RAY_H
 

@@ -1,4 +1,3 @@
-#pragma once
 #ifndef RAYTRACING_MATERIAL_H
 #define RAYTRACING_MATERIAL_H
 
