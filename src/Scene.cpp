@@ -1,8 +1,8 @@
 #include "Scene.hpp"
 
 void Scene::buildBVH() {
-    // this->bvh = new BVHAccel(objects); 
-    this->bvh = new BVHAccel(objects, BVHAccel::SplitMethod::SAH); // improve by using SAH
+    this->bvh = new BVHAccel(objects); 
+    // this->bvh = new BVHAccel(objects, BVHAccel::SplitMethod::SAH); // improve by using SAH
 }
 
 Intersection Scene::intersect(const Ray &ray) const {
@@ -36,6 +36,9 @@ Vector3f Scene::castRay(const Ray &ray) const {
     Vector3f hitColor = this->backgroundColor;
 
     if (intersection.happened) {
+        if (intersection.m->hasEmission()) {
+            return Vector3f(1.);
+        }
         hitColor = shader(intersection, -ray.direction);
     }
 

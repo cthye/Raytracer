@@ -12,6 +12,7 @@ struct Intersection
         normal=Vector3f();
         distance= std::numeric_limits<double>::max();
         m=nullptr;
+        emit=Vector3f();
     }
     bool happened;
     Vector3f coords;

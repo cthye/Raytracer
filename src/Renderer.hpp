@@ -7,8 +7,8 @@ class Renderer
 {
 public:
     std::vector<Vector3f>* framebuffer;
-    int spp = 16;
-    // int spp = 512;
+    // int spp = 16;
+    int spp = 512;
     int THREAD_NUMBER = 16;
     int renderedPixels = 0;
 

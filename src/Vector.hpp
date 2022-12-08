@@ -40,7 +40,9 @@ public:
     float&      operator[](int index) {
         return (&x)[index];
     }
-    bool operator ==(Vector3f &v) const {return x == v.x && y == v.y && z == v.z;}
+    bool operator ==(Vector3f v) const {return x == v.x && y == v.y && z == v.z;}
+    bool operator !=(Vector3f v) const {return x != v.x || y != v.y || z != v.z;}
+
 
     static Vector3f Min(const Vector3f &p1, const Vector3f &p2) {
         return Vector3f(std::min(p1.x, p2.x), std::min(p1.y, p2.y),
