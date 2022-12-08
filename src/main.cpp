@@ -34,13 +34,13 @@ int main(int argc, char** argv)
     std::shared_ptr<Material> pink = std::make_shared<Material>(DIFFUSE, Vector3f(0.725f, 0.61f, 0.68f), Vector3f(0.0f));
     std::shared_ptr<Material> light = std::make_shared<Material>(DIFFUSE, Vector3f(0.65f), (8.0f * Vector3f(0.747f+0.058f, 0.747f+0.258f, 0.747f) + 15.6f * Vector3f(0.740f+0.287f,0.740f+0.160f,0.740f) + 18.4f *Vector3f(0.737f+0.642f,0.737f+0.159f,0.737f)));
 
-    MeshTriangle floor("../models/cornellbox/floor.obj", "floor", white);
-    MeshTriangle shortbox("../models/cornellbox/shortbox.obj", "shortbox", white);
-    MeshTriangle tallbox("../models/cornellbox/tallbox.obj", "tallbox", white);
-    // MeshTriangle bunny("../models/bunny/bunny.obj", Vector3f(200, -60, 150), Vector3f(1500, 1500, 1500), Vector3f(-1, 0, 0), Vector3f(0, 1, 0), Vector3f(0, 0, -1), pink);
-    MeshTriangle left("../models/cornellbox/left.obj", "left", red);
-    MeshTriangle right("../models/cornellbox/right.obj", "right", green);
-    MeshTriangle light_("../models/cornellbox/light.obj", "light", light);
+    MeshTriangle floor("../models/cornellbox/floor.obj", white, "floor");
+    MeshTriangle shortbox("../models/cornellbox/shortbox.obj", white, "shortbox");
+    MeshTriangle tallbox("../models/cornellbox/tallbox.obj", white, "tallbox");
+    MeshTriangle bunny("../models/bunny/bunny.obj", Vector3f(200, -60, 150), Vector3f(1500, 1500, 1500), Vector3f(-1, 0, 0), Vector3f(0, 1, 0), Vector3f(0, 0, -1), pink);
+    MeshTriangle left("../models/cornellbox/left.obj", red, "left");
+    MeshTriangle right("../models/cornellbox/right.obj", green, "right");
+    MeshTriangle light_("../models/cornellbox/light.obj", light, "light");
     // Sphere ball(Vector3f(200, 100, 150), 100, pink);
 
 

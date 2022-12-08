@@ -82,7 +82,7 @@ Vector3f Scene::shader(Intersection intersection, Vector3f wo) const {
     }
 
     if (get_random_float() < RussianRoulette) {
-        Vector3f wo_ = m->scatter(N);  // p -> q
+        Vector3f wo_ = m->scatter(N, IMPORTANCE);  // p -> q
         float pdf = m->pdf(wo, wo_, N);
 
         Ray r(hitPoint + EPSILON * wo_, normalize(wo_));

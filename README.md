@@ -10,8 +10,9 @@ This renderer aims to have the following features:
 - Multiple samples anti-aliasing
 - Positionable camera
 - Surface Light 
-- Diffuse bounce with cosine weighted hemisphere sampling
-- ...
+- Diffuse bounce with uniformally distributed sampling and cosine weighted hemisphere sampling
+- Monte Carlo path tracing
+- Stop path tracing with Russian Roulette
 - Parallel rendering with CPU (OpenMP)
 
 
@@ -41,6 +42,8 @@ Define the scene of the world. It has the following methods and parameters:
 - Cast ray to the viewport
 - Add objects (meshTriangle, sphere, ect..) to scene and build BVH
 - Calculate the intersections with objects in the scene
+- Sample lights
+- Shade color
 #### Casting ray to viewport
 The viewport (aka screen) coordinate ranges from x[-1, 1] and y[-1, 1]. 
 Given the imageAspectRatio and fovy, then 
@@ -80,9 +83,9 @@ If only consider x coordinates, let $t_{min}$ represents the time when the ray e
 
 $$t_{min} = \frac{x_0 - A_x}{b_x}, t_{max} = \frac{x_1 - A_x}{b_x}$$
 
-For 3 dimenstions, $$t_{enter} = max(t_{xmin}, t_{ymin}, t_{zmin}). t_{exit} = min(t_{xmax}, t_{ymax}, t_{zmax})$$
+For 3 dimenstions, $t_{enter} = max(t_{xmin}, t_{ymin}, t_{zmin}). t_{exit} = min(t_{xmax}, t_{ymax}, t_{zmax})$
 
-Notice that both t_min and t_max can be negative, which means that the ray'sorigin is inside of the box or the ray does not enter the box. Therefore, if a ray hits the box, it needs to satisfy $$t_{enter} <= t_{exit}$$ and $$t_{exit} >= 0$$
+Notice that both t_min and t_max can be negative, which means that the ray'sorigin is inside of the box or the ray does not enter the box. Therefore, if a ray hits the box, it needs to satisfy $t_{enter} <= t_{exit}$ and $t_{exit} >= 0$
 
 #### Construct Bounding Boxes for Primitives
 
@@ -102,7 +105,7 @@ Creating a bounding box from 2 boxes by union is just update the pMin and pMax:
 
 The main idea of constructing BVH is building a tree whose nodes contain the bounding boxes recursively.  Choose the max-extent axis from x/y/z, sort the primitives, and put half of them into left/right subtree. The leaf nodes only conatin one bounding box. 
 
-##### Optimization: SAH based BVH
+#### Optimization: SAH based BVH
 
 A bounding box hierarchy based on the Surface Area Heuristic (SAH) is a way of organizing bounding boxes in a tree-like structure such that the overall cost of searching the tree for a particular object is minimized. The SAH uses the surface area of the bounding boxes to determine how they should be arranged in the hierarchy. Bounding boxes with smaller surface areas are placed closer to the leaves of the tree, while bounding boxes with larger surface areas are placed closer to the root of the tree. This arrangement allows for efficient searching, as the search can be quickly pruned once a bounding box with a small enough surface area is found.
 
@@ -161,11 +164,13 @@ The object class need to define the following functions:
 
 For triangle and sphere, these implematations are intuitively. For MeshTriangle object, it would become a bit more complex.
 
-For each meshTriangle, it needs to build up a bvh for triangle pritimives inside it. Therefore, 
+For each meshTriangle, it needs to build up a bvh for triangle pritimives inside it. Therefore, a Sample function to randomly select a point in a bvh tree also is needed (still, it's a recursive method)
 
 ### Material
 
+Material is now support for diffuse material. It's initialized with emission and Kd (albedo)
 
+Functions in meterial class will be discussed below.  
 
 ### Shader
 
@@ -250,19 +255,23 @@ if n.x > 0.9, (near to x) $\vec{a} = (0, 1, 0)$ else  $\vec{a} = (1, 0, 0)$
 
 ##### PDF
 
-If scattered ray is uniformaly sampled across the hemisphere, the $$pdf(w_i) = 1 / 2\pi$$
+If scattered ray is uniformaly sampled across the hemisphere, the $pdf(w_i) = 1 / 2\pi$
 
-If scattered ray is cosine weighted sampled across the hemisphere, the $$pdf(w_i) = cos\theta/\pi$$
+If scattered ray is cosine weighted sampled across the hemisphere, the $pdf(w_i) = cos\theta/\pi$
 
 ##### Russian Roulette
 
-Use Russian Roulette o stop the recursive procedure: choose a random number, if the random number is larger than the threshold, stop recursion and just return 0 (for this point, its indircetion illumination is zero but its direction illumination may not). Otherwise, continue the tracing. Notice that, the equation is changed to $$L_r(\vec{x}, \vec{\omega_r}) = \frac{f_r(\vec{x}, \vec{\omega_i}\rightarrow \vec{\omega_r}) L_i(\vec{x}, \vec{\omega_i}) cos\theta_i}{pdf(\omega_i)* p(rr)} $$ since we add one more randomness with Russian Roulette ($p(rr)$ is just the threshold). 
+Use Russian Roulette o stop the recursive procedure: choose a random number, if the random number is larger than the threshold, stop recursion and just return 0 (for this point, its indircetion illumination is zero but its direction illumination may not). Otherwise, continue the tracing. Notice that, the equation is changed to
+$$L_r(\vec{x}, \vec{\omega_r}) = \frac{f_r(\vec{x}, \vec{\omega_i}\rightarrow \vec{\omega_r}) L_i(\vec{x}, \vec{\omega_i}) cos\theta_i}{pdf(\omega_i)* p(rr)} $$ 
+since we add one more randomness with Russian Roulette ($p(rr)$ is just the threshold). 
 
 ##### Sample lights
 
 <img src="./doc/light.png" alt="image-20221207084738670" style="zoom:50%;" />
 
-Althought the idea above works, it's not an efficient way. If the light source is a small emitted object, it's hard for the uniformaly scatter ray $\omega_i$ to hit the light and many rays are wasted. Instead, directly sample from light will help. The integral over the hemisphere can be converted to an integral over the light surfaces by changing of variable from solid angles to surface areas. Since that solid angle $\omega = \frac{A}{r^2}$ by definition, $d\omega = \frac{cos\theta'}{|x, x^{'}|}dA, cos\theta'=n \cdot -\vec{\omega_i} $ For now, the equation is changed to $$L_r(\vec{x}, \vec{\omega_r}) = f_r(\vec{x}, \vec{\omega_i}\rightarrow \vec{\omega_r}) L_i(\vec{x}, \vec{\omega_i}) cos\theta_i cos\theta_i'\frac{1}{||x' - x|| * A}$$.(Assume sample uniformly from A and thus the pdf = 1/A) 
+Althought the idea above works, it's not an efficient way. If the light source is a small emitted object, it's hard for the uniformaly scatter ray $\omega_i$ to hit the light and many rays are wasted. Instead, directly sample from light will help. The integral over the hemisphere can be converted to an integral over the light surfaces by changing of variable from solid angles to surface areas. Since that solid angle $\omega = \frac{A}{r^2}$ by definition, $d\omega = \frac{cos\theta'}{|x, x^{'}|}dA, cos\theta'=n \cdot -\vec{\omega_i}$ For now, the equation is changed to 
+$$L_r(\vec{x}, \vec{\omega_r}) = f_r(\vec{x}, \vec{\omega_i}\rightarrow \vec{\omega_r}) L_i(\vec{x}, \vec{\omega_i}) cos\theta_i cos\theta_i'\frac{1}{||x' - x|| * A}$$
+(Assume sample uniformly from A and thus the pdf = 1/A) 
 
 Since the light maybe surface light, uniformly sampling in a traingle mesh also needs to solved:
 
@@ -273,7 +282,7 @@ where $𝑟1,𝑟2 ∼ [0,1]$
 ##### Pseudo code
 
 ```
-Color shader(Intersection p, Ray wo) {
+Color shader(Intersection p, Ray wo) 
     if point p is seen by the light source
     		-- uniformaly sample the light at x'
     		L_dir = fr(x, w_i -> w_r) L_i(x, w_i) cos(theta) cos(theta') / ||x' - p|| / A
@@ -303,9 +312,16 @@ Define some useful global util functions (clamp, deg2Rad, etc..)
 
 ## Result
 
+### Cornell box
+
+![512](./src/images/cornell_box.png)
+![512-2](./src/images/cornell_bunny.png)
+
+
+
 compared between two sample methods
 
-Different
+Different BVH?
 
 ## Build and Run
 

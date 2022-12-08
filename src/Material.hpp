@@ -2,7 +2,6 @@
 #define RAYTRACING_MATERIAL_H
 
 #include "Vector.hpp"
-// #include "global.hpp"
 
 enum MaterialType { DIFFUSE, MICROFACET };
 enum SampleType { UNIFORMAL, IMPORTANCE };
@@ -74,6 +73,7 @@ Material::Material(MaterialType t, Vector3f _kd, Vector3f e) {
 
 /// Vector3f Material::getColor(){return m_color;}
 Vector3f Material::getEmission() { return m_emission; }
+
 bool Material::hasEmission() {
     if (m_emission.norm() > EPSILON)
         return true;
@@ -221,21 +221,6 @@ void Material::geometry_term(const Vector3f &N, const Vector3f &h,
     res = dotProduct(N, wi) * dotProduct(N, wo);
     return;
 }
-
-
-// convert local to world..
-// Vector3f Material::toWorld(const Vector3f &a, const Vector3f &N) {
-//     Vector3f B, C;
-//     if (std::fabs(N.x) > std::fabs(N.y)) {
-//         float invLen = 1.0f / std::sqrt(N.x * N.x + N.z * N.z);
-//         C = Vector3f(N.z * invLen, 0.0f, -N.x * invLen);
-//     } else {
-//         float invLen = 1.0f / std::sqrt(N.y * N.y + N.z * N.z);
-//         C = Vector3f(0.0f, N.z * invLen, -N.y * invLen);
-//     }
-//     B = crossProduct(C, N);
-//     return a.x * B + a.y * C + a.z * N;
-// }
 
 // convert local to world..
 Vector3f Material::toWorld(const Vector3f &a, const Vector3f &N) {
