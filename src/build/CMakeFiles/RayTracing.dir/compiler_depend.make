@@ -3931,10 +3931,13 @@ CMakeFiles/RayTracing.dir/main.cpp.o: /Users/cthye/cse167-final/src/main.cpp \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/__filesystem/u8path.h \
   /opt/homebrew/Cellar/llvm/15.0.2/include/c++/v1/cassert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/assert.h \
+  /Users/cthye/cse167-final/src/MeshTriangle.hpp \
   /Users/cthye/cse167-final/src/Sphere.hpp
 
 
 /Users/cthye/cse167-final/src/Sphere.hpp:
+
+/Users/cthye/cse167-final/src/MeshTriangle.hpp:
 
 /Users/cthye/cse167-final/src/OBJ_Loader.hpp:
 
