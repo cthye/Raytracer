@@ -168,7 +168,7 @@ For each meshTriangle, it needs to build up a bvh for triangle pritimives inside
 
 ### Material
 
-Material is now support for diffuse material. It's initialized with emission and Kd (albedo)
+Material is now support for diffuse material. It's initialized with emission and color (albedo)
 
 Functions in meterial class will be discussed below.  
 
@@ -314,14 +314,21 @@ Define some useful global util functions (clamp, deg2Rad, etc..)
 
 ### Cornell box
 
+#### Rendered with uniformally-distributed hemisphere sampling
+
 ![512](./src/images/cornell_box.png)
+
+#### Rendered with cosine weighted hemisphere sampling
+
+well...no significant difference from the former one
+
+![512](./src/images/importance.png)
+
+#### Positionable camera
+
 ![512-2](./src/images/cornell_bunny.png)
 
 
-
-compared between two sample methods
-
-Different BVH?
 
 ## Build and Run
 
@@ -335,10 +342,14 @@ make
 ```
 
 ## CUDA version
-I don't want to lose the feature of parallel rendering under GPU. So I also try to implement it on CUDA. Due to the limitation of time, I only implement some basic functions (not a real RT like the above CPU-version)
+I don't want to lose the feature of parallel rendering under GPU. So I also try to implement it on CUDA. Due to the limitation of time, I only implement some basic functions (**not a real RT** like the above CPU-version)
 
-### Code implementation
-todo
+#### Result
+
+(still buggy)
+
+![cuda](./cuda/out.jpg)
+
 ### Build and Run
 The code is developed with Ubuntu Linux, CUDA 9.x, and NVIDIA GeForce 940Mx.
 #### Step1: Modify the ```Makefile```
@@ -351,7 +362,7 @@ Replace the ```xx``` with the correct gencode. Check with the [link](https://arn
 make out.ppm
 ```
 ## Acknowledgement
-The CPU-version ray tracer refers to the tutorial from [ray tracing in one weekend series](https://raytracing.github.io/books) and [GAMES101](https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html) a lots.
+The CPU-version ray tracer refers to the tutorial from [ray tracing in one weekend series](https://raytracing.github.io/books) and [GAMES101](https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html).
 
 The GPU-version ray tracer is heavily based the [NVIDIA CUDA tutorials](https://developer.nvidia.com/blog/accelerated-ray-tracing-cuda/)
 
