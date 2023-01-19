@@ -1,4 +1,4 @@
-# CSE167 Final Project Write Up
+# Project Write Up
 
 #### **This is a personal project implementing a ray tracer**
 
