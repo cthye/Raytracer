@@ -341,26 +341,6 @@ make
 ./RayTracing
 ```
 
-## CUDA version
-I don't want to lose the feature of parallel rendering under GPU. So I also try to implement it on CUDA. Due to the limitation of time, I only implement some basic functions (**not a real RT** like the above CPU-version)
-
-#### Result
-
-(still buggy)
-
-![cuda](./cuda/out.jpg)
-
-### Build and Run
-The code is developed with Ubuntu Linux, CUDA 9.x, and NVIDIA GeForce 940Mx.
-#### Step1: Modify the ```Makefile```
-```
-GENCODE_FLAGS  = -gencode arch=compute_xx,code=sm_xx
-```
-Replace the ```xx``` with the correct gencode. Check with the [link](https://arnon.dk/matching-sm-architectures-arch-and-gencode-for-various-nvidia-cards/)
-#### Step2: Make
-```
-make out.ppm
-```
 ## Acknowledgement
 The CPU-version ray tracer refers to the tutorial from [ray tracing in one weekend series](https://raytracing.github.io/books) and [GAMES101](https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html).
 
